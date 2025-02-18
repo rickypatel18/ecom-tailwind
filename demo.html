@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Font-face declarations */
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ExtraBold.woff") format("woff"),
+          url("./Fonts/Poppins-ExtraBold.woff2") format("woff2");
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ExtraBoldItalic.woff") format("woff"),
+          url("./Fonts/Poppins-ExtraBoldItalic.woff2") format("woff2");
+        font-weight: 800;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ExtraLight.woff") format("woff"),
+          url("./Fonts/Poppins-ExtraLight.woff2") format("woff2");
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ExtraLightItalic.woff") format("woff"),
+          url("./Fonts/Poppins-ExtraLightItalic.woff2") format("woff2");
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Italic.woff") format("woff"),
+          url("./Fonts/Poppins-Italic.woff2") format("woff2");
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Light.woff") format("woff"),
+          url("./Fonts/Poppins-Light.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-LightItalic.woff") format("woff"),
+          url("./Fonts/Poppins-LightItalic.woff2") format("woff2");
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Medium.woff") format("woff"),
+          url("./Fonts/Poppins-Medium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-MediumItalic.woff") format("woff"),
+          url("./Fonts/Poppins-MediumItalic.woff2") format("woff2");
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Regular.woff") format("woff"),
+          url("./Fonts/Poppins-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-SemiBold.woff") format("woff"),
+          url("./Fonts/Poppins-SemiBold.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-SemiBoldItalic.woff") format("woff"),
+          url("./Fonts/Poppins-SemiBoldItalic.woff2") format("woff2");
+        font-weight: 600;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Thin.woff") format("woff"),
+          url("./Fonts/Poppins-Thin.woff2") format("woff2");
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ThinItalic.woff") format("woff"),
+          url("./Fonts/Poppins-ThinItalic.woff2") format("woff2");
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      /* Classes for different font weights and styles */
+      .light {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        color: #000000;
+      }
+
+      .light-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 18px;
+        color: #666;
+      }
+
+      .extra-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .extra-bold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .extra-light {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+        color: black;
+      }
+
+      .extra-light-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: #444;
+      }
+
+      .semi-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        color: #222;
+      }
+
+      .regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #888;
+      }
+
+      .thin {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+        color: #aaa;
+      }
+
+      .medium-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+        font-size: 20px;
+        color: #444;
+      }
+
+      .semi-bold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 22px;
+        color: #222;
+      }
+
+      .thin-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+        font-size: 18px;
+        color: #aaa;
+      }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <!-- top-bar -->
+    <div class="w-full p-0 m-0 border-b border-gray-200 bg-white" ;>
+      <!-- signup -->
+      <div style="background: #333333; padding: 10px 0px; height: 42px">
+        <div
+          class="w-[80%] p-0 mx-auto flex justify-between items-center flex-wrap"
+        >
+          <!-- Store Location Section -->
+          <div class="flex items-center justify-center gap-2 flex-wrap">
+            <i class="fas fa-location-dot"></i>
+            <p class="mb-0 text-[12px] font-weight-400 text-[#B3B3B3] light">
+              Store Location: Lincoln- 344, Illinois, Chicago, USA
+            </p>
+          </div>
+
+          <!-- Right Section (Language, Currency, Sign-in) -->
+          <div class="flex items-center gap-[20px] flex-wrap">
+            <div class="flex items-center text-gray-600 text-xs">
+              <p class="mb-0 text-[12px] text-[#B3B3B3] light">Eng</p>
+              <i class="fas fa-chevron-down ml-1 text-[#B3B3B3]"></i>
+            </div>
+            <div class="flex items-center text-gray-600 text-xs">
+              <p class="mb-0 text-[12px] text-[#B3B3B3] light">USD</p>
+              <i class="fas fa-chevron-down ml-1 text-[#B3B3B3]"></i>
+            </div>
+            <div class="flex px-0">
+              <img
+                src="./images/Devider.png"
+                alt="divider"
+                style="height: 14px"
+              />
+            </div>
+            <div class="flex items-center gap-2 text-gray-600 text-xs">
+              <p class="mb-0 text-[14px] text-[#B3B3B3]">Sign In</p>
+              <img src="./images/slash.png" alt="" srcset="" />
+              <p class="mb-0 text-[14px] text-[#B3B3B3]">Sign Up</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- logo  -->
+      <div style="padding: 0px">
+        <!-- Center the outer div using flexbox -->
+        <div
+          class="w-[80%] mx-auto px-0 h-[93px] flex items-center justify-center"
+        >
+          <div
+            class="flex w-full flex-wrap md:flex-nowrap items-center justify-between text-center md:text-left"
+          >
+            <!-- Logo & Ecobazar -->
+            <div
+              class="w-full md:w-1/4 flex items-center justify-center md:justify-start"
+            >
+              <img
+                src="./images/plant 1.png"
+                alt="logo"
+                class="w-[32px] h-[32px]"
+              />
+              <h2
+                class="ml-2 text-[32px] text-[#002603] light"
+                style="font-weight: 500"
+              >
+                Ecobazar
+              </h2>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="w-full md:w-auto flex justify-center md:justify-start">
+              <div
+                class="flex w-full border border-[#e6e6e6] rounded-md overflow-hidden"
+              >
+                <span
+                  class="flex items-center justify-center bg-white pl-[15px] text-gray-500"
+                >
+                  <img
+                    src="./images/Search.png"
+                    alt=""
+                    class="h-[20px] w-[20px]"
+                  />
+                </span>
+                <input
+                  type="text"
+                  class="h-[45px] w-[400px] outline-none light text-[15px]"
+                  style="padding: 12px 18px 12px 10px"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button
+                  class="light bg-[#00b207] w-[98px] h-[45px] text-[14px] font-[600] text-white text-sm sm:px-4"
+                  style="padding: 14px 24px 14px 24px"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <!-- Shopping -->
+            <div
+              class="w-full md:w-1/4 flex items-center justify-center gap-[16px] h-[34px] w-[191px] lg:justify-center mt-4 md:mt-0 lg:mt-0"
+              style="display: flex; justify-content: flex-end"
+            >
+              <!-- Heart Icon -->
+              <div>
+                <img
+                  src="./images/Vector.png"
+                  alt=""
+                  class="w-[28px] h-[24px]"
+                />
+              </div>
+              <!-- Divider -->
+              <div class="flex px-0">
+                <img
+                  src="./images/devi-1.png"
+                  alt="divider"
+                  style="height: 24px"
+                />
+              </div>
+
+              <!-- Cart -->
+              <div class="relative">
+                <img
+                  src="./images/Rectangle.png"
+                  alt=""
+                  class="w-[26px] h-[26px]"
+                />
+                <span
+                  class="absolute top-1 left-[20px] transform -translate-x-1/2 -translate-y-1/2 bg-[#2c742f] text-white rounded-full w-[17px] h-[17px] text-[12px] flex items-center justify-center"
+                >
+                  9
+                </span>
+              </div>
+              <!-- Shopping cart -->
+              <div class="text-center md:text-left">
+                <p class="mb-0 light text-[11px] font-[400]">Shopping cart</p>
+                <p class="mb-0 light text-[14px] font-[500]">$57.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- navigation -->
+      <div class="bg-[#f2f2f2]">
+        <div
+          class="w-[80%] mx-auto px-0 flex flex-wrap items-center justify-between"
+        >
+          <!-- Left Section (Menu + Links) -->
+          <div
+            class="flex flex-wrap items-center gap-[32px] w-[785px] md:w-auto"
+          >
+            <!-- Category Button with toggle functionality -->
+            <div
+              class="flex items-center bg-[#00B207] h-[56px] w-[210px] px-4 py-4 text-white cursor-pointer relative gap-[8px]"
+              id="category-button"
+              onclick="toggleDropdown()"
+            >
+              <img
+                src="./images/Group.png"
+                alt=""
+                class="h-[14px] w-[18px] text-[#FFFFFF]"
+              />
+              <p
+                class="light text-[14px] font-[500] text-[#FFFFFF]"
+                id="category-name"
+              >
+                All Categories
+              </p>
+              <img
+                src="./images/Group (1).png"
+                alt=""
+                class="h-[6px] w-[11px] text-[#FFFFFF]"
+              />
+            </div>
+
+            <!-- Navigation Links (always visible) -->
+            <nav
+              class="w-full md:w-auto md:flex md:flex-row md:gap-6 flex-col md:flex-nowrap"
+            >
+              <ul
+                class="flex flex-wrap items-center gap-10 text-[#808080] w-full"
+              >
+                <li
+                  class="flex items-center w-full md:w-auto gap-[4px] justify-center"
+                >
+                  <p
+                    class="text-center light text-[14px] font-[400] text-[#808080]"
+                  >
+                    Home
+                  </p>
+                  <img
+                    src="./images/down.png"
+                    alt=""
+                    class="h-[6px] w-[11px] text-[#808080]"
+                  />
+                </li>
+
+                <li
+                  class="flex items-center w-full md:w-auto gap-[4px] justify-center"
+                >
+                  <p
+                    class="text-center light text-[14px] font-[400] text-[#808080]"
+                  >
+                    Shop
+                  </p>
+                  <img
+                    src="./images/down.png"
+                    alt=""
+                    class="h-[6px] w-[11px] text-[#808080]"
+                  />
+                </li>
+                <li
+                  class="flex items-center w-full md:w-auto gap-[4px] justify-center"
+                >
+                  <p
+                    class="text-center light text-[14px] font-[400] text-[#808080]"
+                  >
+                    Pages
+                  </p>
+                  <img
+                    src="./images/down.png"
+                    alt=""
+                    class="h-[6px] w-[11px] text-[#808080]"
+                  />
+                </li>
+                <li
+                  class="flex items-center w-full md:w-auto gap-[4px] justify-center"
+                >
+                  <p
+                    class="text-center light text-[14px] font-[400] text-[#808080]"
+                  >
+                    Blog
+                  </p>
+                  <img
+                    src="./images/down.png"
+                    alt=""
+                    class="h-[6px] w-[11px] text-[#808080]"
+                  />
+                </li>
+                <li
+                  class="flex items-center w-full md:w-auto gap-[4px] justify-center"
+                >
+                  <p
+                    class="text-center light text-[14px] font-[400] text-[#808080]"
+                  >
+                    About Us
+                  </p>
+                </li>
+                <li
+                  class="flex items-center w-full md:w-auto gap-[4px] justify-center"
+                >
+                  <p
+                    class="text-center light text-[14px] font-[400] text-[#808080]"
+                  >
+                    Contact Us
+                  </p>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Right Section (Phone Number) -->
+          <div class="flex items-center gap-3 mt-4 md:mt-2">
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>(219) 555-0114</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ends here -->
+  </body>
+</html>
