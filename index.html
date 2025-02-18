@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Arrow positioning */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 3px;
+        user-select: none;
+        z-index: 10; /* Ensure arrows are on top of images */
+      }
+
+      .prev {
+        left: -400px;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .next {
+        right: -400px;
+        border-radius: 0 3px 3px 0;
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next {
+          font-size: 11px;
+        }
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body style="box-sizing: border-box; padding: 0px; margin: 0px">
+    <div class="w-full p-0 m-0 border-b border-gray-200 bg-white" ;>
+      <!-- signup -->
+      <div style="background: #333333; padding: 10px 0px">
+        <div
+          class="w-[80%] p-0 mx-auto flex justify-between items-center flex-wrap"
+        >
+          <!-- Store Location Section -->
+          <div
+            class="flex items-center justify-center gap-2 flex-wrap"
+            style="padding: 5px 50px 5px 0px"
+          >
+            <i class="fas fa-location-dot"></i>
+            <p class="mb-0 text-[14px] text-[#B3B3B3]">
+              Store Location: Lincoln- 344, Illinois, Chicago, USA
+            </p>
+          </div>
+
+          <!-- Right Section (Language, Currency, Sign-in) -->
+          <div class="flex items-center gap-3 flex-wrap">
+            <div class="flex items-center text-gray-600 text-xs">
+              <p class="mb-0 text-[14px] text-[#B3B3B3]">Eng</p>
+              <i class="fas fa-chevron-down ml-1 text-[#B3B3B3]"></i>
+            </div>
+            <div class="flex items-center text-gray-600 text-xs">
+              <p class="mb-0 text-[14px] text-[#B3B3B3]">USD</p>
+              <i class="fas fa-chevron-down ml-1 text-[#B3B3B3]"></i>
+            </div>
+            <div class="flex px-0">
+              <img
+                src="./images/Devider.png"
+                alt="divider"
+                style="height: 14px"
+                class="text-[#B3B3B3]"
+              />
+            </div>
+            <div class="flex items-center gap-2 text-gray-600 text-xs">
+              <p class="mb-0 text-[14px] text-[#B3B3B3]">Sign In</p>
+              <p class="mb-0 text-[#B3B3B3]">/</p>
+              <p class="mb-0 text-[14px] text-[#B3B3B3]">Sign Up</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- logo  -->
+      <div style="padding: 16px 0px">
+        <div class="w-[80%] mx-auto px-0">
+          <div
+            class="mx-auto flex flex-wrap md:flex-nowrap items-center justify-between text-center md:text-left"
+          >
+            <!-- Logo & Ecobazar -->
+            <div
+              class="w-full md:w-1/4 flex items-center justify-center md:justify-start"
+            >
+              <img src="./images/plant 1.png" alt="logo" class="w-[32px]" />
+              <h2 class="ml-2 text-3xl" style="font-weight: 600">Ecobazar</h2>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="w-full mt-5 md:mt-0 md:w-1/5 flex justify-center">
+              <div
+                class="flex w-full border border-[#e6e6e6] rounded-md overflow-hidden"
+              >
+                <span
+                  class="flex items-center justify-center bg-white px-3 text-gray-500"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input
+                  type="text"
+                  class="flex-1 p-2 h-[36px] outline-none w-10"
+                  placeholder="Search..."
+                  aria-label="Search"
+                />
+                <button
+                  class="bg-[#00b207] text-white px-3 py-2 text-sm sm:px-4"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <!-- Heart & Shopping Cart -->
+            <div
+              class="w-full md:w-1/4 flex items-center justify-center gap-4 lg:justify-center mt-4 md:mt-0 lg:mt-0"
+              style="display: flex; justify-content: end"
+            >
+              <!-- Heart Icon -->
+              <div>
+                <i class="fa-regular fa-heart text-2xl"></i>
+              </div>
+              <!-- Divider -->
+              <div>
+                <img
+                  src="./images/Devider.png"
+                  alt="divider"
+                  style="height: 26px"
+                  class="text-[#B3B3B3]"
+                />
+              </div>
+              <!-- Shopping Cart -->
+              <div class="flex items-center">
+                <button type="button" class="relative">
+                  <i class="fa-solid fa-bag-shopping text-2xl"></i>
+                  <span
+                    class="absolute top-1 left-4 transform -translate-x-1/2 -translate-y-1/2 bg-[#2c742f] text-white rounded-full w-[17px] h-[17px] text-[12px] flex items-center justify-center"
+                  >
+                    9
+                  </span>
+                </button>
+                <div class="ml-2 text-center md:text-left">
+                  <p class="mb-0">Shopping cart</p>
+                  <p class="mb-0">$57.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- navigation -->
+      <div class="bg-[#f2f2f2]">
+        <div
+          class="w-[80%] mx-auto px-0 flex flex-wrap items-center justify-between"
+        >
+          <!-- Left Section (Menu + Links) -->
+          <div class="flex flex-wrap items-center gap-10 w-full md:w-auto">
+            <!-- Category Button with toggle functionality -->
+            <div
+              class="flex items-center bg-[#00B207] max-w-[200px] px-4 py-4 rounded-md text-white cursor-pointer relative"
+              id="category-button"
+              onclick="toggleDropdown()"
+            >
+              <i class="fa-solid fa-bars"></i>
+              <p class="mx-2" id="category-name">All Categories</p>
+              <i class="fas fa-chevron-down" id="category-icon"></i>
+
+              <!-- Categories Dropdown Menu -->
+              <div
+                class="absolute bg-white border shadow-md w-[200px] mt-2 rounded-md hidden"
+                id="category-menu"
+              >
+                <ul class="flex flex-col p-2">
+                  <!-- List of Categories with Subcategories on Hover -->
+                  <li
+                    class="relative py-2 px-4 bg-[#f2f2f2] text-gray-500 hover:bg-gray-200 group"
+                    onclick="selectCategory('Electronics', event)"
+                  >
+                    Electronics
+                    <!-- Subcategories for Electronics -->
+                    <ul
+                      class="absolute left-full top-0 hidden bg-white shadow-md rounded-md group-hover:block w-[200px]"
+                    >
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Electronics - Phones', event)"
+                      >
+                        Phones
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Electronics - Laptops', event)"
+                      >
+                        Laptops
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Electronics - Cameras', event)"
+                      >
+                        Cameras
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="relative py-2 px-4 bg-[#f2f2f2] text-gray-500 hover:bg-gray-200 group"
+                    onclick="selectCategory('Fashion', event)"
+                  >
+                    Fashion
+                    <!-- Subcategories for Fashion -->
+                    <ul
+                      class="absolute left-full top-0 hidden bg-white shadow-md rounded-md group-hover:block w-[200px]"
+                    >
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Fashion - Men', event)"
+                      >
+                        Men
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Fashion - Women', event)"
+                      >
+                        Women
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Fashion - Kids', event)"
+                      >
+                        Kids
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="relative py-2 px-4 bg-[#f2f2f2] text-gray-500 hover:bg-gray-200 group"
+                    onclick="selectCategory('Home & Kitchen', event)"
+                  >
+                    Home & Kitchen
+                    <!-- Subcategories for Home & Kitchen -->
+                    <ul
+                      class="absolute left-full top-0 hidden bg-white shadow-md rounded-md group-hover:block w-[200px]"
+                    >
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Home & Kitchen - Furniture', event)"
+                      >
+                        Furniture
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Home & Kitchen - Appliances', event)"
+                      >
+                        Appliances
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Home & Kitchen - Kitchenware', event)"
+                      >
+                        Kitchenware
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="relative py-2 px-4 bg-[#f2f2f2] text-gray-500 hover:bg-gray-200 group"
+                    onclick="selectCategory('Sports', event)"
+                  >
+                    Sports
+                    <!-- Subcategories for Sports -->
+                    <ul
+                      class="absolute left-full top-0 hidden bg-white shadow-md rounded-md group-hover:block w-[200px]"
+                    >
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Sports - Football', event)"
+                      >
+                        Football
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Sports - Basketball', event)"
+                      >
+                        Basketball
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Sports - Fitness', event)"
+                      >
+                        Fitness
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="relative py-2 px-4 bg-[#f2f2f2] text-gray-500 hover:bg-gray-200 group"
+                    onclick="selectCategory('Toys', event)"
+                  >
+                    Toys
+                    <!-- Subcategories for Toys -->
+                    <ul
+                      class="absolute left-full top-0 hidden bg-white shadow-md rounded-md group-hover:block w-[200px]"
+                    >
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Toys - Action Figures', event)"
+                      >
+                        Action Figures
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Toys - Board Games', event)"
+                      >
+                        Board Games
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Toys - Outdoor Toys', event)"
+                      >
+                        Outdoor Toys
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="relative py-2 px-4 bg-[#f2f2f2] text-gray-500 hover:bg-gray-200 group"
+                    onclick="selectCategory('Books', event)"
+                  >
+                    Books
+                    <!-- Subcategories for Books -->
+                    <ul
+                      class="absolute left-full top-0 hidden bg-white shadow-md rounded-md group-hover:block w-[200px]"
+                    >
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Books - Fiction', event)"
+                      >
+                        Fiction
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Books - Non-fiction', event)"
+                      >
+                        Non-fiction
+                      </li>
+                      <li
+                        class="py-2 px-4 hover:bg-gray-100"
+                        onclick="selectCategory('Books - Science', event)"
+                      >
+                        Science
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Navigation Links (always visible) -->
+            <nav
+              class="w-full md:w-auto md:flex md:flex-row md:gap-6 flex-col md:flex-nowrap"
+            >
+              <ul
+                class="flex flex-wrap items-center gap-10 text-[#808080] w-full"
+              >
+                <li class="flex items-center w-full md:w-auto">
+                  Home <i class="fas fa-chevron-down ml-1"></i>
+                </li>
+                <li class="flex items-center w-full md:w-auto">
+                  Shop <i class="fas fa-chevron-down ml-1"></i>
+                </li>
+                <li class="flex items-center w-full md:w-auto">
+                  Pages <i class="fas fa-chevron-down ml-1"></i>
+                </li>
+                <li class="flex items-center w-full md:w-auto">
+                  Blog <i class="fas fa-chevron-down ml-1"></i>
+                </li>
+                <li class="flex items-center w-full md:w-auto">
+                  About Us <i class="fas fa-chevron-down ml-1"></i>
+                </li>
+                <li class="flex items-center w-full md:w-auto">
+                  Contact Us <i class="fas fa-chevron-down ml-1"></i>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Right Section (Phone Number) -->
+          <div class="flex items-center gap-3 mt-4 md:mt-2">
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>(219) 555-0114</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- carousal -->
+    <div>
+      <div class="w-[80%] mx-auto flex flex-row">
+        <div class="w-[60%] flex flex-col" style="border: 1px solid red">
+          <div
+            class="slideshow-container"
+            style="max-width: 1000px; position: relative; margin: auto"
+          >
+            <div class="mySlides fade" style="display: none">
+              <div class="numbertext">1 / 3</div>
+              <img src="./images/carousal-image.png" style="width: 100%" />
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./images/carousal-image.png" style="width: 100%" />
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./images/carousal-image.png" style="width: 100%" />
+            </div>
+
+            <!-- Left and Right Arrows -->
+            <a class="prev" onclick="plusSlides(-1)" style="color: black">❮</a>
+            <a class="next" onclick="plusSlides(1)" style="color: black">❯</a>
+          </div>
+          <br />
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+        <div>
+          <p>Welcome to shopery</p>
+          <p>Fresh & Healthy Organic Food</p>
+          <p>Free shipping on all your order. we deliver, you enjoy</p>
+          <button style="display: flex;">
+            <p>Shop now</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ends here -->
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      function toggleDropdown() {
+        const menu = document.getElementById("category-menu");
+        const icon = document.getElementById("category-icon");
+
+        // Toggle the dropdown visibility
+        menu.classList.toggle("hidden");
+
+        // Toggle the chevron icon
+        if (menu.classList.contains("hidden")) {
+          icon.classList.remove("fa-chevron-up");
+          icon.classList.add("fa-chevron-down");
+        } else {
+          icon.classList.remove("fa-chevron-down");
+          icon.classList.add("fa-chevron-up");
+        }
+      }
+
+      function selectCategory(category, event) {
+        // Prevent event bubbling to close the dropdown prematurely
+        event.stopPropagation();
+
+        // Update the selected category name
+        const categoryName = document.getElementById("category-name");
+        categoryName.textContent = category;
+
+        // Close the dropdown after selection
+        const menu = document.getElementById("category-menu");
+        const icon = document.getElementById("category-icon");
+
+        menu.classList.add("hidden");
+        icon.classList.remove("fa-chevron-up");
+        icon.classList.add("fa-chevron-down");
+      }
+    </script>
+  </body>
+</html>
