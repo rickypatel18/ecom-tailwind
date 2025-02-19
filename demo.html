@@ -226,20 +226,26 @@
     </style>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./demo.js"></script>
   </head>
 
   <body>
     <!-- top-bar -->
     <div class="w-full p-0 m-0 border-b border-gray-200 bg-white" ;>
       <!-- signup -->
-      <div style="background: #333333; padding: 10px 0px; height: 42px">
+      <div
+        style="background: #333333; padding: 10px 0px"
+        class="h-[auto] lg:h-[42px]"
+      >
         <div
-          class="w-[80%] p-0 mx-auto flex justify-between items-center flex-wrap"
+          class="w-[100%] px-3 mx-auto flex flex-wrap flex-row justify-between items-center gap-[10px] lg:px-0 lg:w-[80%]"
         >
           <!-- Store Location Section -->
           <div class="flex items-center justify-center gap-2 flex-wrap">
             <i class="fas fa-location-dot"></i>
-            <p class="mb-0 text-[12px] font-weight-400 text-[#B3B3B3] light">
+            <p
+              class="hidden md:block mb-0 text-[12px] font-weight-400 text-[#B3B3B3] light"
+            >
               Store Location: Lincoln- 344, Illinois, Chicago, USA
             </p>
           </div>
@@ -262,109 +268,262 @@
               />
             </div>
             <div class="flex items-center gap-2 text-gray-600 text-xs">
-              <p class="mb-0 text-[14px] text-[#B3B3B3]">Sign In</p>
+              <p class="mb-0 text-[12px] text-[#B3B3B3]">Sign In</p>
               <img src="./images/slash.png" alt="" srcset="" />
-              <p class="mb-0 text-[14px] text-[#B3B3B3]">Sign Up</p>
+              <p class="mb-0 text-[12px] text-[#B3B3B3]">Sign Up</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- logo  -->
-      <div style="padding: 0px">
-        <!-- Center the outer div using flexbox -->
+      <!-- logo-searchbar-cart -->
+      <div class="relative w-full px-[10px] lg:px-[0px]">
         <div
-          class="w-[80%] mx-auto px-0 h-[93px] flex items-center justify-center"
+          class="w-full h-[60px] mx-auto px-2 py-0 flex items-center justify-between gap-2 md:h-[93px] md:gap-5 md:px-0 lg:w-[80%] lg:gap-0"
         >
-          <div
-            class="flex w-full flex-wrap md:flex-nowrap items-center justify-between text-center md:text-left"
-          >
-            <!-- Logo & Ecobazar -->
-            <div
-              class="w-full md:w-1/4 flex items-center justify-center md:justify-start"
+          <!-- Logo & Ecobazar -->
+          <div class="flex items-center justify-center">
+            <img
+              src="./images/plant 1.png"
+              alt="logo"
+              class="w-[28px] h-[28px] md:w-[32px] md:h-[32px]"
+            />
+            <h2
+              class="ml-[5px] md:ml-2 text-[20px] md:text-[32px] text-[#002603] light font-medium"
             >
-              <img
-                src="./images/plant 1.png"
-                alt="logo"
-                class="w-[32px] h-[32px]"
+              Ecobazar
+            </h2>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="hidden md:flex justify-center flex-1 md:flex-initial">
+            <div
+              class="flex items-center justify-between w-[150px] md:w-[340px] h-[35px] md:h-[45px] border border-[#e6e6e6] rounded-md overflow-hidden"
+            >
+              <!-- Search Icon (Visible on md and larger screens) -->
+              <span
+                class="hidden md:flex items-center justify-center bg-white pl-[15px] text-gray-500"
+              >
+                <img
+                  src="./images/Search.png"
+                  alt=""
+                  class="block h-[20px] w-[20px]"
+                />
+              </span>
+
+              <!-- Input Field -->
+              <input
+                type="text"
+                class="h-full w-[120px] flex-1 flex-wrap outline-none text-[15px] px-2"
+                placeholder="Search"
+                aria-label="Search"
               />
-              <h2
-                class="ml-2 text-[32px] text-[#002603] light"
-                style="font-weight: 500"
+
+              <!-- Search Button (Now Fully Visible on Small Screens) -->
+              <button
+                class="bg-[#00b207] w-[40px] h-[35px] md:w-[98px] md:h-[45px] text-[14px] font-[600] text-white flex items-center justify-center"
               >
-                Ecobazar
-              </h2>
+                <p class="hidden md:block">Search</p>
+                <i
+                  class="fa-solid fa-magnifying-glass block md:hidden text-white"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Shopping Section -->
+          <div
+            class="flex items-center justify-between gap-[17px] md:gap-[16px] h-[34px] md:w-[191px] lg:justify-center mt-0"
+            style="margin-right: -5px"
+          >
+            <!-- search icon -->
+            <div>
+              <i
+                class="fa-solid fa-magnifying-glass md:hidden cursor-pointer"
+                style="color: #555"
+                id="search-id"
+              ></i>
             </div>
 
-            <!-- Search Bar -->
-            <div class="w-full md:w-auto flex justify-center md:justify-start">
+            <!-- Heart Icon -->
+            <div>
+              <img
+                src="./images/Vector.png"
+                alt="Heart"
+                class="w-[20px] h-[17px] md:w-[28px] md:h-[24px] cursor-pointer"
+              />
+            </div>
+
+            <!-- Divider -->
+            <div class="hidden md:flex px-0">
+              <img
+                src="./images/devi-1.png"
+                alt="divider"
+                class="h-[20px] md:h-[24px]"
+              />
+            </div>
+
+            <!-- Cart -->
+            <div class="relative">
+              <img
+                src="./images/Rectangle.png"
+                alt="Cart"
+                class="w-[20px] h-[17px] md:w-[26px] md:h-[24px] cursor-pointer"
+              />
+              <span
+                class="absolute border-none top-[1px] left-[15px] md:top-1 md:left-[20px] transform -translate-x-1/2 -translate-y-1/2 bg-[#2c742f] text-white rounded-full w-[13px] h-[13px] md:w-[17px] md:h-[17px] text-[12px] flex items-center justify-center"
+              >
+                9
+              </span>
+            </div>
+
+            <!-- Shopping cart details -->
+            <div class="hidden md:block text-center md:text-left">
+              <p class="mb-0 light text-[11px] font-[400]">Shopping cart</p>
+              <p class="mb-0 light text-[14px] font-[500]">$57.00</p>
+            </div>
+
+            <!-- (Hamburger Icon) -->
+            <div class="relative z-50">
+              <i
+                class="block md:hidden fa-solid fa-bars cursor-pointer text-xl"
+                id="menu-toggle"
+                style="color: #555"
+              ></i>
+
+              <!-- Right Dropdown Menu -->
               <div
-                class="flex w-full border border-[#e6e6e6] rounded-md overflow-hidden"
+                id="dropdown-menu"
+                class="fixed top-0 right-0 w-[75vw] h-screen bg-white shadow-lg rounded-lg border border-gray-300 opacity-0 scale-95 translate-x-5 transition-all duration-300 ease-in-out pointer-events-none overflow-y-auto"
               >
-                <span
-                  class="flex items-center justify-center bg-white pl-[15px] text-gray-500"
-                >
-                  <img
-                    src="./images/Search.png"
-                    alt=""
-                    class="h-[20px] w-[20px]"
-                  />
-                </span>
-                <input
-                  type="text"
-                  class="h-[45px] w-[400px] outline-none light text-[15px]"
-                  style="padding: 12px 18px 12px 10px"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button
-                  class="light bg-[#00b207] w-[98px] h-[45px] text-[14px] font-[600] text-white text-sm sm:px-4"
-                  style="padding: 14px 24px 14px 24px"
-                >
-                  Search
-                </button>
-              </div>
-            </div>
+                <!-- Close Button -->
+                <div class="flex justify-end px-6 pt-4">
+                  <i
+                    id="menu-close"
+                    class="fa-solid fa-xmark text-xl cursor-pointer"
+                  ></i>
+                </div>
+                <div>
+                  <p class="bg-gray-100 text-center">Navlinks</p>
+                </div>
 
-            <!-- Shopping -->
-            <div
-              class="w-full md:w-1/4 flex items-center justify-center gap-[16px] h-[34px] w-[191px] lg:justify-center mt-4 md:mt-0 lg:mt-0"
-              style="display: flex; justify-content: flex-end"
-            >
-              <!-- Heart Icon -->
-              <div>
-                <img
-                  src="./images/Vector.png"
-                  alt=""
-                  class="w-[28px] h-[24px]"
-                />
-              </div>
-              <!-- Divider -->
-              <div class="flex px-0">
-                <img
-                  src="./images/devi-1.png"
-                  alt="divider"
-                  style="height: 24px"
-                />
+                <ul class="py-2">
+                  <li
+                    class="px-4 py-2 hover:bg-gray-100 hover:text-green-600 transition-all cursor-pointer border-b"
+                  >
+                    <a href="#">Home</a>
+                  </li>
+                  <li
+                    class="px-4 py-2 hover:bg-gray-100 hover:text-green-600 transition-all cursor-pointer border-b"
+                  >
+                    <a href="#">Shop</a>
+                  </li>
+                  <li
+                    class="px-4 py-2 hover:bg-gray-100 hover:text-green-600 transition-all cursor-pointer border-b"
+                  >
+                    <a href="#">Pages</a>
+                  </li>
+                  <li
+                    class="px-4 py-2 hover:bg-gray-100 hover:text-green-600 transition-all cursor-pointer border-b"
+                  >
+                    <a href="#">More</a>
+                  </li>
+                </ul>
+
+                <div class="mt-5">
+                  <p class="bg-gray-100 text-center">Categories</p>
+                </div>
+
+                <ul class="py-2 bg-white" id="category-menu">
+                  <!-- Category 1 -->
+                  <li
+                    class="relative px-4 py-2 cursor-pointer hover:bg-gray-100 category-item border-b"
+                  >
+                    <span>Electronics</span>
+                    <i
+                      class="fas fa-chevron-down absolute right-4 top-3 text-gray-400 toggle-icon"
+                    ></i>
+                  </li>
+                  <ul class="pl-6 hidden subcategory">
+                    <li class="px-4 py-2 hover:bg-gray-100 border-b">
+                      Smartphones
+                    </li>
+                    <li class="px-4 py-2 hover:bg-gray-100 border-b">
+                      Cameras
+                    </li>
+                    <li class="px-4 py-2 hover:bg-gray-100 border-b">
+                      Laptops
+                    </li>
+                  </ul>
+
+                  <!-- Category 2 -->
+                  <li
+                    class="relative px-4 py-2 cursor-pointer hover:bg-gray-100 category-item border-b"
+                  >
+                    <span>Fashion</span>
+                    <i
+                      class="fas fa-chevron-down absolute right-4 top-3 text-gray-400 toggle-icon"
+                    ></i>
+                  </li>
+                  <ul class="pl-6 hidden subcategory">
+                    <li class="px-4 py-2 hover:bg-gray-100 border-b">Men</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 border-b">Women</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 border-b">Kids</li>
+                  </ul>
+
+                  <!-- Category 3 -->
+                  <li
+                    class="relative px-4 py-2 cursor-pointer hover:bg-gray-100 category-item border-b"
+                  >
+                    <span>Home & Kitchen</span>
+                    <i
+                      class="fas fa-chevron-down absolute right-4 top-3 text-gray-400 toggle-icon"
+                    ></i>
+                  </li>
+                  <ul class="pl-6 hidden subcategory">
+                    <li class="px-4 py-2 hover:bg-gray-100 border-b">
+                      Furniture
+                    </li>
+                    <li class="px-4 py-2 hover:bg-gray-100 border-b">
+                      Appliances
+                    </li>
+                    <li class="px-4 py-2 hover:bg-gray-100 border-b">Decor</li>
+                  </ul>
+                </ul>
               </div>
 
-              <!-- Cart -->
-              <div class="relative">
-                <img
-                  src="./images/Rectangle.png"
-                  alt=""
-                  class="w-[26px] h-[26px]"
-                />
-                <span
-                  class="absolute top-1 left-[20px] transform -translate-x-1/2 -translate-y-1/2 bg-[#2c742f] text-white rounded-full w-[17px] h-[17px] text-[12px] flex items-center justify-center"
-                >
-                  9
-                </span>
-              </div>
-              <!-- Shopping cart -->
-              <div class="text-center md:text-left">
-                <p class="mb-0 light text-[11px] font-[400]">Shopping cart</p>
-                <p class="mb-0 light text-[14px] font-[500]">$57.00</p>
+              <!-- Search Dropdown Menu -->
+              <div
+                id="search-dropdown"
+                class="fixed top-[-50vh] left-0 w-full h-[30vh] bg-white shadow-lg border border-gray-300 opacity-0 scale-100 transition-all duration-300 ease-in-out pointer-events-none flex items-center justify-center overflow-x-auto"
+              >
+                <div class="relative w-[90%] max-w-[400px]">
+                  <!-- Close Button -->
+                  <div class="absolute top-[-60px] right-2">
+                    <i
+                      id="search-close"
+                      class="fa-solid fa-xmark text-2xl cursor-pointer"
+                    ></i>
+                  </div>
+                  <!-- paragraph -->
+                  <p class="text-black font-[500] text-2xl mb-5">
+                    What are you looking for?
+                  </p>
+
+                  <!-- Search Input -->
+                  <div
+                    class="flex items-center w-full border border-gray-300 rounded-md overflow-hidden"
+                  >
+                    <input
+                      type="text"
+                      class="w-full p-2 text-lg outline-none"
+                      placeholder="Search..."
+                    />
+                    <button class="bg-[#00b207] text-white px-4 py-[10px]">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -372,107 +531,137 @@
       </div>
 
       <!-- navigation -->
-      <div class="bg-[#f2f2f2]">
+      <div class="bg-[#f2f2f2] hidden md:flex border-none outline-none">
         <div
-          class="w-[80%] mx-auto px-0 flex flex-wrap items-center justify-between"
+          class="w-full mx-auto px-0 flex flex-wrap items-center md:justify-between md:px-[15px] lg:w-[80%] lg:px-[5px]"
         >
           <!-- Left Section (Menu + Links) -->
-          <div
-            class="flex flex-wrap items-center gap-[32px] w-[785px] md:w-auto"
-          >
-            <!-- Category Button with toggle functionality -->
+          <!-- Category Button with toggle functionality -->
+          <div class="relative">
             <div
               class="flex items-center bg-[#00B207] h-[56px] w-[210px] px-4 py-4 text-white cursor-pointer relative gap-[8px]"
-              id="category-button"
-              onclick="toggleDropdown()"
+              id="category-button-md"
             >
-              <img
-                src="./images/Group.png"
-                alt=""
-                class="h-[14px] w-[18px] text-[#FFFFFF]"
-              />
-              <p
-                class="light text-[14px] font-[500] text-[#FFFFFF]"
-                id="category-name"
-              >
+              <img src="./images/Group.png" alt="" class="h-[14px] w-[18px]" />
+              <p class="light text-[14px] font-[500] text-[#FFFFFF]">
                 All Categories
               </p>
               <img
                 src="./images/Group (1).png"
                 alt=""
-                class="h-[6px] w-[11px] text-[#FFFFFF]"
+                class="h-[6px] w-[11px]"
               />
             </div>
 
-            <!-- Navigation Links (always visible) -->
-            <nav
-              class="w-full md:w-auto md:flex md:flex-row md:gap-6 flex-col md:flex-nowrap"
+            <!-- Dropdown Menu -->
+            <div
+              id="dropdown-menu-cat-md"
+              class="absolute left-0 top-full w-[210px] bg-white shadow-lg rounded-lg border border-gray-200 opacity-0 scale-95 transition-all duration-300 ease-in-out pointer-events-none"
             >
-              <ul
-                class="flex flex-wrap items-center gap-10 text-[#808080] w-full"
-              >
-                <li class="flex items-center md:w-auto gap-[4px]">
-                  <p
-                    class="text-center light text-[14px] font-[400] text-[#808080] hover:text-[#00B207]"
-                  >
-                    Home
-                  </p>
+              <ul class="py-2">
+                <!-- Electronics -->
+                <li
+                  class="group grp-md relative px-4 py-2 cursor-pointer hover:bg-gray-100"
+                >
+                  Electronics
                   <i
-                    class="fas fa-chevron-down text-[#808080] text-[12px] hover:text-[#00B207]"
+                    class="fas fa-chevron-right absolute right-4 top-3 text-gray-400"
                   ></i>
+
+                  <!-- Subcategory -->
+                  <ul
+                    class="absolute left-full top-0 w-[200px] bg-white shadow-md border border-gray-200 opacity-0 scale-95 transition-all duration-300 ease-in-out pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto"
+                  >
+                    <li class="px-4 py-2 hover:bg-gray-100">Laptops</li>
+                    <li class="px-4 py-2 hover:bg-gray-100">Smartphones</li>
+                    <li class="px-4 py-2 hover:bg-gray-100">Cameras</li>
+                  </ul>
                 </li>
 
-                <li class="flex items-center md:w-auto gap-[4px]">
-                  <p
-                    class="text-center light text-[14px] font-[400] text-[#808080] hover:text-[#00B207]"
-                  >
-                    Shop
-                  </p>
+                <!-- Fashion -->
+                <li
+                  class="group grp-md relative px-4 py-2 cursor-pointer hover:bg-gray-100"
+                >
+                  Fashion
+                  <i
+                    class="fas fa-chevron-right absolute right-4 top-3 text-gray-400"
+                  ></i>
 
+                  <!-- Subcategory -->
+                  <ul
+                    class="absolute left-full top-0 w-[200px] bg-white shadow-md border border-gray-200 opacity-0 scale-95 transition-all duration-300 ease-in-out pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto"
+                  >
+                    <li class="px-4 py-2 hover:bg-gray-100">Men</li>
+                    <li class="px-4 py-2 hover:bg-gray-100">Women</li>
+                    <li class="px-4 py-2 hover:bg-gray-100">Kids</li>
+                  </ul>
+                </li>
+
+                <!-- Home & Kitchen -->
+                <li
+                  class="group grp-md relative px-4 py-2 cursor-pointer hover:bg-gray-100"
+                >
+                  Home & Kitchen
                   <i
-                    class="fas fa-chevron-down text-[#808080] text-[12px] hover:text-[#00B207]"
+                    class="fas fa-chevron-right absolute right-4 top-3 text-gray-400"
                   ></i>
-                </li>
-                <li class="flex items-center md:w-auto gap-[4px]">
-                  <p
-                    class="text-center light text-[14px] font-[400] text-[#808080] hover:text-[#00B207]"
+
+                  <!-- Subcategory -->
+                  <ul
+                    class="absolute left-full top-0 w-[200px] bg-white shadow-md border border-gray-200 opacity-0 scale-95 transition-all duration-300 ease-in-out pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto"
                   >
-                    Pages
-                  </p>
-                  <i
-                    class="fas fa-chevron-down text-[#808080] text-[12px] hover:text-[#00B207]"
-                  ></i>
-                </li>
-                <li class="flex items-center md:w-auto gap-[4px]">
-                  <p
-                    class="text-center light text-[14px] font-[400] text-[#808080] hover:text-[#00B207]"
-                  >
-                    Blog
-                  </p>
-                  <i
-                    class="fas fa-chevron-down text-[#808080] text-[12px] hover:text-[#00B207]"
-                  ></i>
-                </li>
-                <li class="flex items-center md:w-auto gap-[4px]">
-                  <p
-                    class="text-center light text-[14px] font-[400] text-[#808080] hover:text-[#00B207]"
-                  >
-                    About Us
-                  </p>
-                </li>
-                <li class="flex items-center md:w-auto gap-[4px]">
-                  <p
-                    class="text-center light text-[14px] font-[400] text-[#808080] hover:text-[#00B207]"
-                  >
-                    Contact Us
-                  </p>
+                    <li class="px-4 py-2 hover:bg-gray-100">Furniture</li>
+                    <li class="px-4 py-2 hover:bg-gray-100">Appliances</li>
+                    <li class="px-4 py-2 hover:bg-gray-100">Decor</li>
+                  </ul>
                 </li>
               </ul>
-            </nav>
+            </div>
           </div>
 
+          <!-- Navigation Links -->
+          <nav class="flex w-auto gap-10 h-[56px]">
+            <ul class="flex items-center gap-6 text-[#808080]">
+              <li class="flex items-center gap-[4px]">
+                <p class="text-[14px] font-[400] hover:text-[#00B207]">Home</p>
+                <i
+                  class="fas fa-chevron-down text-[12px] hover:text-[#00B207]"
+                ></i>
+              </li>
+              <li class="flex items-center gap-[4px]">
+                <p class="text-[14px] font-[400] hover:text-[#00B207]">Shop</p>
+                <i
+                  class="fas fa-chevron-down text-[12px] hover:text-[#00B207]"
+                ></i>
+              </li>
+              <li class="flex items-center gap-[4px]">
+                <p class="text-[14px] font-[400] hover:text-[#00B207]">Pages</p>
+                <i
+                  class="fas fa-chevron-down text-[12px] hover:text-[#00B207]"
+                ></i>
+              </li>
+              <li class="flex items-center gap-[4px]">
+                <p class="text-[14px] font-[400] hover:text-[#00B207]">Blog</p>
+                <i
+                  class="fas fa-chevron-down text-[12px] hover:text-[#00B207]"
+                ></i>
+              </li>
+              <li class="flex items-center gap-[4px]">
+                <p class="text-[14px] font-[400] hover:text-[#00B207]">
+                  About Us
+                </p>
+              </li>
+              <li class="flex items-center gap-[4px]">
+                <p class="text-[14px] font-[400] hover:text-[#00B207]">
+                  Contact Us
+                </p>
+              </li>
+            </ul>
+          </nav>
+          <!--  -->
+
           <!-- Right Section (Phone Number) -->
-          <div class="flex items-center gap-3 mt-4 md:mt-2">
+          <div class="flex items-center gap-3 mt-4 md:hidden lg:flex lg:mt-2">
             <img
               src="./images/PhoneCall 1.png"
               alt=""
