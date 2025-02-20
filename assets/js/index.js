@@ -1,3 +1,6 @@
+
+
+// right toggle
 document.addEventListener("DOMContentLoaded", function () {
   var menuToggle = document.getElementById("menu-toggle");
   var menuClose = document.getElementById("menu-close");
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// search toggle
 document.addEventListener("DOMContentLoaded", function () {
   const searchIcon = document.getElementById("search-id");
   const searchMenu = document.getElementById("search-dropdown");
@@ -59,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// category toggle for small device
 document.addEventListener("DOMContentLoaded", function () {
   const categories = document.querySelectorAll(".category-item");
 
@@ -87,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// category toggle for medium device
 document.addEventListener("DOMContentLoaded", function () {
   const categoryButton = document.getElementById("category-button-md");
   const dropdownMenu = document.getElementById("dropdown-menu-cat-md");

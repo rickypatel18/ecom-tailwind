@@ -1,0 +1,218 @@
+
+      /* Font-face declarations */
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Regular.woff2") format("woff2"),
+             url("./Fonts/Poppins-Regular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ExtraBold.woff") format("woff"),
+          url("./Fonts/Poppins-ExtraBold.woff2") format("woff2");
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ExtraBoldItalic.woff") format("woff"),
+          url("./Fonts/Poppins-ExtraBoldItalic.woff2") format("woff2");
+        font-weight: 800;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ExtraLight.woff") format("woff"),
+          url("./Fonts/Poppins-ExtraLight.woff2") format("woff2");
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ExtraLightItalic.woff") format("woff"),
+          url("./Fonts/Poppins-ExtraLightItalic.woff2") format("woff2");
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Italic.woff") format("woff"),
+          url("./Fonts/Poppins-Italic.woff2") format("woff2");
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Light.woff") format("woff"),
+          url("./Fonts/Poppins-Light.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-LightItalic.woff") format("woff"),
+          url("./Fonts/Poppins-LightItalic.woff2") format("woff2");
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Medium.woff") format("woff"),
+          url("./Fonts/Poppins-Medium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-MediumItalic.woff") format("woff"),
+          url("./Fonts/Poppins-MediumItalic.woff2") format("woff2");
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Regular.woff") format("woff"),
+          url("./Fonts/Poppins-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-SemiBold.woff") format("woff"),
+          url("./Fonts/Poppins-SemiBold.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-SemiBoldItalic.woff") format("woff"),
+          url("./Fonts/Poppins-SemiBoldItalic.woff2") format("woff2");
+        font-weight: 600;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-Thin.woff") format("woff"),
+          url("./Fonts/Poppins-Thin.woff2") format("woff2");
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Fonts/Poppins-ThinItalic.woff") format("woff"),
+          url("./Fonts/Poppins-ThinItalic.woff2") format("woff2");
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      /* Classes for different font weights and styles */
+      .light {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        color: #000000;
+      }
+
+      .light-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 18px;
+        color: #666;
+      }
+
+      .extra-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .extra-bold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .extra-light {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+        color: black;
+      }
+
+      .extra-light-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .medium {
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 20px;
+        color: #444;
+      }
+
+      .semi-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        color: #222;
+      }
+
+      .regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #888;
+      }
+
+      .thin {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+        color: #aaa;
+      }
+
+      .medium-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+        font-size: 20px;
+        color: #444;
+      }
+
+      .semi-bold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 22px;
+        color: #222;
+      }
+
+      .thin-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+        font-size: 18px;
+        color: #aaa;
+      }
