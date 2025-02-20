@@ -1,0 +1,34 @@
+@import "../font/poppins/stylesheet.css";
+@import "../font/segoe-script/segoe-script.css";
+
+body {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.font-segoe {
+  font-family: "Segoe Script", serif !important;
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 520px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .container {
+    max-width: 100%;
+    padding: 0px 16px;
+  }
+}

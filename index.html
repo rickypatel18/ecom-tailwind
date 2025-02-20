@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
     <!--  css links -->
-    <link rel="stylesheet" href="./assets/css/slick/slick.css" />
-    <link rel="stylesheet" href="./fontcss.css" />
-    <link rel="stylesheet" href="./assets//font/poppins.css" />
+    <link rel="stylesheet" href="assets/font/seg/stylesheet.css" />
+    <link rel="stylesheet" href="assets//font/poppins/stylesheet.css" />
+    <link rel="stylesheet" href="assets/css/slick/slick.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -30,7 +36,6 @@
 
   <body>
     <!-- top-bar -->
-
     <div class="w-full p-0 m-0 border-b border-gray-200 bg-white" ;>
       <!-- signup -->
       <div
@@ -62,15 +67,19 @@
             </div>
             <div class="flex px-0">
               <img
-                src="./assets/images/deviders/devider-1.png"
+                src="assets/images/deviders/devider-1.png"
                 alt="divider"
                 class="h-[15px]"
               />
             </div>
             <div class="flex items-center gap-2 text-gray-600 text-xs">
-              <p class="mb-0 text-[12px] font-[400] text-[#B3B3B3]">Sign In</p>
-              <img src="./assets/images/header/slash.png" alt="" srcset="" />
-              <p class="mb-0 text-[12px] font-[400] text-[#B3B3B3]">Sign Up</p>
+              <p class="mb-0 text-[12px] font-[400] text-[#B3B3B3] regular">
+                Sign In
+              </p>
+              <img src="assets/images/header/slash.png" alt="" srcset="" />
+              <p class="mb-0 text-[12px] font-[400] text-[#B3B3B3] regular">
+                Sign Up
+              </p>
             </div>
           </div>
         </div>
@@ -84,12 +93,12 @@
           <!-- Logo & Ecobazar -->
           <div class="flex items-center">
             <img
-              src="./assets/images/logo/logo.png"
+              src="assets/images/logo/logo.png"
               alt="logo"
               class="w-[28px] h-[28px] md:w-[32px] md:h-[32px]"
             />
             <h2
-              class="ml-[5px] md:ml-2 text-[20px] md:text-[32px] text-[#002603] font-[500]"
+              class="ml-[5px] md:ml-2 text-[20px] md:text-[32px] text-[#002603] font-[500] regular"
             >
               Ecobazar
             </h2>
@@ -406,60 +415,149 @@
     </div>
 
     <!-- carousal section main -->
-
-    <div class="w-[100%] mx-auto p-0 lg:w-[80%]">
-      <div
-        class="relative flex flex-col md:flex-row items-center justify-center w-[100%] mx-auto h-[100%] parent"
-      >
-        <!-- Carousel Section (60% width) -->
-        <div class="w-[85%] md:w-[60%] fade">
-          <div><img src="./images/carousal-image.png" alt="Slide 1" /></div>
-          <div><img src="./images/carousal-image.png" alt="Slide 2" /></div>
-          <div><img src="./images/carousal-image.png" alt="Slide 3" /></div>
-          <div><img src="./images/carousal-image.png" alt="Slide 4" /></div>
-        </div>
-
-        <!-- Text Section (40% width) -->
-        <div
-          class="w-[85%] md:w-[40%] p-4 flex flex-col items-start justify-start h-[200px]"
-        >
-          <p
-            id="carousel-greet"
-            class="text-[#FF0000] text-[14px] hidden leading-tight te items-start justify-start"
-          ></p>
-          <h2
-            id="carousel-text"
-            class="text-[30px] md:text-[50px] font-bold text-gray-800 hidden leading-tight items-start justify-start"
-          ></h2>
-          <p
-            id="carousel-description"
-            class="text-gray-600 text-[18px] text-[#618062] hidden justify-start leading-tight items-start"
-          ></p>
-
-          <button
-            style="
-              display: flex;
-              background-color: #00b207;
-              border-radius: 43px;
-              padding: 15px 38px;
-              align-items: center;
-              justify-content: center;
-              gap: 15px;
-              color: #ffffff;
-              margin-top: 20px;
-            "
-          >
-            <p>Shop now</p>
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
+    <section class="home-main-banner overflow-hidden">
+      <div class="container mx-auto">
+        <div class="banner-slider-wrap">
+          <div class="item">
+            <div
+              class="banner-slider-item grid grid-cols-1 lg:grid-cols-5 items-center gap-6"
+            >
+              <div class="banner-image lg:col-span-3">
+                <img
+                  src="assets/images/carousal/carousal-image.png"
+                  alt="Slide 1"
+                />
+              </div>
+              <div class="banner-content lg:col-span-2">
+                <h6
+                  class="font-segoe leading-[1.3] text-[#FF0000] text-[14px] uppercase items-start justify-start mb-2"
+                >
+                  Welcome to shopery
+                </h6>
+                <h2
+                  class="text-[36px] md:text-[46px] lg:text-[56px] leading-[1.3] font-semibold text-gray-800 items-start justify-start mb-3 md:mb-5"
+                >
+                  Organic Food
+                </h2>
+                <p
+                  class="text-gray-600 text-base md:text-lg text-[#618062] justify-start items-start"
+                >
+                  Free shipping on all your orders. We deliver, you enjoy.
+                </p>
+                <button
+                  style="
+                    display: flex;
+                    background-color: #00b207;
+                    border-radius: 43px;
+                    padding: 15px 38px;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+                    color: #ffffff;
+                    margin-top: 20px;
+                  "
+                >
+                  <p>Shop now</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div
+              class="banner-slider-item grid grid-cols-1 lg:grid-cols-5 items-center gap-6"
+            >
+              <div class="banner-image lg:col-span-3">
+                <img
+                  src="assets/images/carousal/carousal-image.png"
+                  alt="Slide 1"
+                />
+              </div>
+              <div class="banner-content lg:col-span-2">
+                <h6
+                  class="font-segoe leading-[1.3] text-[#FF0000] text-[14px] uppercase items-start justify-start mb-2"
+                >
+                  Welcome to shopery
+                </h6>
+                <h2
+                  class="text-[36px] md:text-[46px] lg:text-[56px] leading-[1.3] font-semibold text-gray-800 items-start justify-start mb-5"
+                >
+                  Organic Food
+                </h2>
+                <p
+                  class="text-gray-600 text-lg text-[#618062] justify-start items-start"
+                >
+                  Free shipping on all your orders. We deliver, you enjoy.
+                </p>
+                <button
+                  style="
+                    display: flex;
+                    background-color: #00b207;
+                    border-radius: 43px;
+                    padding: 15px 38px;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+                    color: #ffffff;
+                    margin-top: 20px;
+                  "
+                >
+                  <p>Shop now</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div
+              class="banner-slider-item grid grid-cols-1 lg:grid-cols-5 items-center gap-6"
+            >
+              <div class="banner-image lg:col-span-3">
+                <img
+                  src="assets/images/carousal/carousal-image.png"
+                  alt="Slide 1"
+                />
+              </div>
+              <div class="banner-content lg:col-span-2">
+                <h6
+                  class="font-segoe leading-[1.3] text-[#FF0000] text-[14px] uppercase items-start justify-start mb-2"
+                >
+                  Welcome to shopery
+                </h6>
+                <h2
+                  class="text-[36px] md:text-[46px] lg:text-[56px] leading-[1.3] font-semibold text-gray-800 items-start justify-start mb-5"
+                >
+                  Organic Food
+                </h2>
+                <p
+                  class="text-gray-600 text-lg text-[#618062] justify-start items-start"
+                >
+                  Free shipping on all your orders. We deliver, you enjoy.
+                </p>
+                <button
+                  style="
+                    display: flex;
+                    background-color: #00b207;
+                    border-radius: 43px;
+                    padding: 15px 38px;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+                    color: #ffffff;
+                    margin-top: 20px;
+                  "
+                >
+                  <p>Shop now</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- ends here -->
-
+    </section>
     <!-- script link -->
-    <script src="./assets//js/index.js"></script>
+    <script src="assets//js/index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       type="text/javascript"
@@ -478,58 +576,14 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript">
-      $(window).on("load", function () {
-        const slideTexts = [
-          {
-            greet: "Welcome to shopery",
-            title: "Fresh & Healthy Organic Food",
-            description:
-              "Free shipping on all your orders. We deliver, you enjoy.",
-          },
-          {
-            greet: "Welcome to shopery",
-            title: "Healthy Organic Food",
-            description: "Free shipping on all your orders.",
-          },
-          {
-            greet: "Welcome to shopery",
-            title: "Fresh & Healthy Ice Creams",
-            description: "Extra discount on all your orders, you enjoy.",
-          },
-          {
-            greet: "Welcome to shopery",
-            title: "All Products",
-            description: "50% Sale on all products.",
-          },
-        ];
-
-        $(".fade").on("init", function (event, slick) {
-          $("#carousel-greet").text(slideTexts[0].greet).removeClass("hidden");
-          $("#carousel-text").text(slideTexts[0].title).removeClass("hidden");
-          $("#carousel-description")
-            .text(slideTexts[0].description)
-            .removeClass("hidden");
-        });
-
-        $(".fade").slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          fade: true,
-          cssEase: "linear",
-          autoplay: true,
-          autoplaySpeed: 3000,
-          arrows: false,
-        });
-
-        $(".fade").on("afterChange", function (event, slick, currentSlide) {
-          $("#carousel-greet").text(slideTexts[currentSlide].greet);
-          $("#carousel-text").text(slideTexts[currentSlide].title);
-          $("#carousel-description").text(slideTexts[currentSlide].description);
-        });
-
-        // Manually trigger Slick Init
-        $(".fade").slick("setPosition");
+      $(".banner-slider-wrap").slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: "linear",
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
       });
     </script>
   </body>

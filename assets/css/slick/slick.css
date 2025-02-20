@@ -10,14 +10,14 @@
 .slick-dots {
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: 90%;
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
 }
 .slick-dots li {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 225px;
 }
 .slick-dots li button:before {
   font-size: 12px;

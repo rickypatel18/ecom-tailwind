@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Sedgwick Ave Display";
+  src: url("SedgwickAveDisplay-Regular.woff2") format("woff2"),
+    url("SedgwickAveDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.sedgwick {
+  font-family: "Sedgwick Ave Display", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
