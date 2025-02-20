@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="shadow-soft">
+      <p class="text-customBlue text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, hic
+        ad sint earum tenetur perspiciatis voluptas quae autem! Vero, repellat
+        aliquam. Eius sequi blanditiis, nesciunt nobis dicta laborum numquam
+        possimus!
+      </p>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              customBlue: "#1E40AF",
+              customGreen: "#10B981",
+              customRed: "#EF4444",
+              customYellow: "#FACC15",
+            },
+
+            fontSize: {
+              xxs: "0.65rem",
+              "2xl": "1.75rem",
+              "4.5xl": "2.5rem",
+            },
+            borderRadius: {
+              xl: "1rem",
+              "2xl": "1.5rem",
+              "3xl": "2rem",
+            },
+            boxShadow: {
+              soft: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              strong: "0 6px 12px rgba(0, 0, 0, 0.2)",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>

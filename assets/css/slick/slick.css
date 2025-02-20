@@ -10,7 +10,7 @@
 .slick-dots {
   position: absolute;
   bottom: 10px;
-  left: 90%;
+  left: 50%;
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
