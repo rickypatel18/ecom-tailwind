@@ -35,7 +35,7 @@
   </head>
 
   <body>
-    <!-- top-bar -->
+    <!-- top-bar-header -->
     <div class="w-full p-0 m-0 border-b border-gray-200 bg-white" ;>
       <!-- signup -->
       <div
@@ -114,7 +114,7 @@
                 class="hidden md:flex items-center justify-center bg-white pl-[15px] text-gray-500"
               >
                 <i
-                  class="fa-solid fa-magnifying-glass block block h-[15px] w-[20px]"
+                  class="fa-solid fa-magnifying-glass block h-[15px] w-[20px]"
                 ></i>
               </span>
 
@@ -189,7 +189,7 @@
               <!-- Right Dropdown Menu -->
               <div
                 id="dropdown-menu"
-                class="fixed top-0 right-0 w-[75vw] h-screen bg-white shadow-lg rounded-lg border border-gray-300 opacity-0 scale-95 translate-x-5 transition-all duration-300 ease-in-out pointer-events-none overflow-y-auto"
+                class="fixed top-0 right-0 w-[75vw] h-screen bg-white rounded-lg border border-gray-300 opacity-0 scale-95 translate-x-5 transition-all duration-300 ease-in-out pointer-events-none overflow-y-auto"
               >
                 <!-- Close Button -->
                 <div class="flex justify-end px-6 pt-4">
@@ -414,8 +414,8 @@
       </div>
     </div>
 
-    <!-- carousal section main -->
-    <section class="home-main-banner overflow-hidden ">
+    <!-- carousal section  -->
+    <section class="home-main-banner overflow-hidden">
       <div class="container mx-auto">
         <div class="banner-slider-wrap">
           <div class="item">
@@ -556,6 +556,666 @@
         </div>
       </div>
     </section>
+
+    <!-- Our Products section -->
+    <section
+      class="main-product-section flex flex-col bg-[#EDF2EE] lg:relative"
+    >
+      <!--feature section  -->
+      <section
+        class="main-feature-section w-full lg:w-[80%] mx-auto lg:absolute lg:top-[-120px] xl:top-[-90px] lg:left-1/2 lg:transform lg:-translate-x-1/2"
+      >
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 justify-center items-stretch text-center border border-[#DAE5DA] rounded-lg mx-2 md:mx-[0px] bg-[white]"
+        >
+          <!-- Feature Card -->
+          <div
+            class="flex flex-col justify-between text-center h-full border p-5 md:p-6 w-full"
+          >
+            <div
+              class="flex w-[50px] h-[50px] md:w-[60px] md:h-[60px] justify-center items-center border mb-2 rounded-full"
+            >
+              <img
+                src="./assets/images/feature/delivery-truck 1.png"
+                alt="Free Shipping"
+                class="h-[32px] w-[32px]"
+              />
+            </div>
+            <div class="text-left flex flex-col gap-2">
+              <h3 class="text-[16px] md:text-[18px] font-[600] text-[#1A1A1A]">
+                Free Shipping on Product
+              </h3>
+              <p class="text-[12px] md:text-[14px] font-[400] text-[#999999]">
+                Free shipping with discount
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between text-center h-full border p-4 md:p-6 w-full"
+          >
+            <div
+              class="flex w-[50px] h-[50px] md:w-[60px] md:h-[60px] justify-center items-center border mb-2 rounded-full"
+            >
+              <img
+                src="./assets/images/feature/headphones 1.png"
+                alt="Great Support"
+                class="h-[32px] w-[32px]"
+              />
+            </div>
+            <div class="text-left flex flex-col gap-2">
+              <h3 class="text-[16px] md:text-[18px] font-[600] text-[#1A1A1A]">
+                Great Support 24/7
+              </h3>
+              <p class="text-[12px] md:text-[14px] font-[400] text-[#999999]">
+                Instant access to Contact and more
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between text-center h-full border p-4 md:p-6 w-full"
+          >
+            <div
+              class="flex w-[50px] h-[50px] md:w-[60px] md:h-[60px] justify-center items-center border mb-2 rounded-full"
+            >
+              <img
+                src="./assets/images/feature/shopping-bag.png"
+                alt="Secure Payment"
+                class="h-[32px] w-[32px]"
+              />
+            </div>
+            <div class="text-left flex flex-col gap-2">
+              <h3 class="text-[16px] md:text-[18px] font-[600] text-[#1A1A1A]">
+                100% Secure Payment
+              </h3>
+              <p class="text-[12px] md:text-[14px] font-[400] text-[#999999]">
+                We ensure your money is safe
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between text-center h-full border p-4 md:p-6 w-full"
+          >
+            <div
+              class="flex w-[50px] h-[50px] md:w-[60px] md:h-[60px] justify-center items-center border mb-2 rounded-full"
+            >
+              <img
+                src="./assets/images/feature/Group.png"
+                alt="Money-Back Guarantee"
+                class="h-[32px] w-[32px]"
+              />
+            </div>
+            <div class="text-left flex flex-col gap-2">
+              <h3 class="text-[16px] md:text-[18px] font-[600] text-[#1A1A1A]">
+                Money-Back Guarantee
+              </h3>
+              <p class="text-[12px] md:text-[14px] font-[400] text-[#999999]">
+                30 days money-back guarantee
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Products section  -->
+      <section
+        class="main-product-section w-[100%] px-2 lg:px-0 lg:w-[80%] flex flex-col justify-center gap-[50px] mx-auto pb-[80px] lg:mt-[80px]"
+      >
+        <!-- Navigation links & intoduction -->
+        <section
+          class="main-navigation-section flex gap-[24px] mx-auto flex-col mt-[100px]"
+        >
+          <h3
+            class="text-[#1A1A1A] text-[27px] sm:text-[30px] md:text-[35px] lg:text-[40px] font-[600] text-center"
+          >
+            Introducing Our Products
+          </h3>
+
+          <div class="flex gap-[24px] mx-auto">
+            <ul
+              class="flex flex-wrap gap-[24px] text-[16px] justify-center items-center"
+            >
+              <li
+                class="text-[13px] md:text-[14px] lg:text-[16px] text-[#808080] font-[500]"
+              >
+                All
+              </li>
+              <img
+                src="./assets/images/deviders/devider-2.png"
+                alt=""
+                class="h-[20px]"
+              />
+              <li
+                class="text-[13px] md:text-[14px] lg:text-[16px] text-[#808080] font-[500]"
+              >
+                Vegetable
+              </li>
+              <img
+                src="./assets/images/deviders/devider-2.png"
+                alt=""
+                class="h-[20px]"
+              />
+              <li
+                class="text-[13px] md:text-[14px] lg:text-[16px] text-[#808080] font-[500]"
+              >
+                Fruits
+              </li>
+              <img
+                src="./assets/images/deviders/devider-2.png"
+                alt=""
+                class="h-[20px]"
+              />
+              <li
+                class="text-[13px] md:text-[14px] lg:text-[16px] text-[#808080] font-[500]"
+              >
+                Meat & Fish
+              </li>
+              <img
+                src="./assets/images/deviders/devider-2.png"
+                alt=""
+                class="h-[20px]"
+              />
+              <li
+                class="text-[13px] md:text-[14px] lg:text-[16px] text-[#808080] font-[500]"
+              >
+                View All
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Product cards -->
+        <section class="w-[100%] main-product-card-section mx-auto p-0">
+          <div
+            class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+          >
+            <!-- Product Card -->
+            <div class="bg-white border md:p-4">
+              <img
+                src="./assets/images/product/Image.png"
+                alt="Product"
+                class="w-full h-56 object-contain rounded-lg"
+              />
+              <div
+                class="flex justify-between w-[100%] px-[5px] md:px-[10px] items-center p-0"
+              >
+                <div class="flex flex-col items-start justify-center">
+                  <p
+                    class="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-[400] text-[#2B572E]"
+                  >
+                    Green Apple
+                  </p>
+                  <p
+                    class="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-[500]"
+                  >
+                    $14.99
+                  </p>
+                  <img
+                    src="./assets/images/product/Rating.png"
+                    alt=""
+                    class="w-[70px] sm:w-[80px] md:[90px] lg:[100px]"
+                  />
+                </div>
+                <div
+                  class="flex w-[35px] h-[35px] sm:w[50px] sm:h-[50px] md:w-[50px] md:h-[50px] bg-[#f2f2f2] items-center justify-center border rounded-full"
+                >
+                  <img
+                    src="./assets/images/product/Bag.png"
+                    alt=""
+                    class="w-[19px] h-[19px] sm:w-[25px] sm:h-[25px] md:w-[25px] md:h-[25px]"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="bg-white border md:p-4">
+              <img
+                src="./assets/images/product/Image.png"
+                alt="Product"
+                class="w-full h-56 object-contain rounded-lg"
+              />
+              <div
+                class="flex justify-between w-[100%] px-[5px] md:px-[10px] items-center p-0"
+              >
+                <div class="flex flex-col items-start justify-center">
+                  <p
+                    class="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-[400] text-[#2B572E]"
+                  >
+                    Green Apple
+                  </p>
+                  <p
+                    class="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-[500]"
+                  >
+                    $14.99
+                  </p>
+                  <img
+                    src="./assets/images/product/Rating.png"
+                    alt=""
+                    class="w-[70px] sm:w-[80px] md:[90px] lg:[100px]"
+                  />
+                </div>
+                <div
+                  class="flex w-[35px] h-[35px] sm:w[50px] sm:h-[50px] md:w-[50px] md:h-[50px] bg-[#f2f2f2] items-center justify-center border rounded-full"
+                >
+                  <img
+                    src="./assets/images/product/Bag.png"
+                    alt=""
+                    class="w-[19px] h-[19px] sm:w-[25px] sm:h-[25px] md:w-[25px] md:h-[25px]"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="bg-white border md:p-4">
+              <img
+                src="./assets/images/product/Image.png"
+                alt="Product"
+                class="w-full h-56 object-contain rounded-lg"
+              />
+              <div
+                class="flex justify-between w-[100%] px-[5px] md:px-[10px] items-center p-0"
+              >
+                <div class="flex flex-col items-start justify-center">
+                  <p
+                    class="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-[400] text-[#2B572E]"
+                  >
+                    Green Apple
+                  </p>
+                  <p
+                    class="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-[500]"
+                  >
+                    $14.99
+                  </p>
+                  <img
+                    src="./assets/images/product/Rating.png"
+                    alt=""
+                    class="w-[70px] sm:w-[80px] md:[90px] lg:[100px]"
+                  />
+                </div>
+                <div
+                  class="flex w-[35px] h-[35px] sm:w[50px] sm:h-[50px] md:w-[50px] md:h-[50px] bg-[#f2f2f2] items-center justify-center border rounded-full"
+                >
+                  <img
+                    src="./assets/images/product/Bag.png"
+                    alt=""
+                    class="w-[19px] h-[19px] sm:w-[25px] sm:h-[25px] md:w-[25px] md:h-[25px]"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="bg-white border md:p-4">
+              <img
+                src="./assets/images/product/Image.png"
+                alt="Product"
+                class="w-full h-56 object-contain rounded-lg"
+              />
+              <div
+                class="flex justify-between w-[100%] px-[5px] md:px-[10px] items-center p-0"
+              >
+                <div class="flex flex-col items-start justify-center">
+                  <p
+                    class="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-[400] text-[#2B572E]"
+                  >
+                    Green Apple
+                  </p>
+                  <p
+                    class="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-[500]"
+                  >
+                    $14.99
+                  </p>
+                  <img
+                    src="./assets/images/product/Rating.png"
+                    alt=""
+                    class="w-[70px] sm:w-[80px] md:[90px] lg:[100px]"
+                  />
+                </div>
+                <div
+                  class="flex w-[35px] h-[35px] sm:w[50px] sm:h-[50px] md:w-[50px] md:h-[50px] bg-[#f2f2f2] items-center justify-center border rounded-full"
+                >
+                  <img
+                    src="./assets/images/product/Bag.png"
+                    alt=""
+                    class="w-[19px] h-[19px] sm:w-[25px] sm:h-[25px] md:w-[25px] md:h-[25px]"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="bg-white border md:p-4">
+              <img
+                src="./assets/images/product/Image.png"
+                alt="Product"
+                class="w-full h-56 object-contain rounded-lg"
+              />
+              <div
+                class="flex justify-between w-[100%] px-[5px] md:px-[10px] items-center p-0"
+              >
+                <div class="flex flex-col items-start justify-center">
+                  <p
+                    class="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-[400] text-[#2B572E]"
+                  >
+                    Green Apple
+                  </p>
+                  <p
+                    class="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-[500]"
+                  >
+                    $14.99
+                  </p>
+                  <img
+                    src="./assets/images/product/Rating.png"
+                    alt=""
+                    class="w-[70px] sm:w-[80px] md:[90px] lg:[100px]"
+                  />
+                </div>
+                <div
+                  class="flex w-[35px] h-[35px] sm:w[50px] sm:h-[50px] md:w-[50px] md:h-[50px] bg-[#f2f2f2] items-center justify-center border rounded-full"
+                >
+                  <img
+                    src="./assets/images/product/Bag.png"
+                    alt=""
+                    class="w-[19px] h-[19px] sm:w-[25px] sm:h-[25px] md:w-[25px] md:h-[25px]"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="bg-white border md:p-4">
+              <img
+                src="./assets/images/product/Image.png"
+                alt="Product"
+                class="w-full h-56 object-contain rounded-lg"
+              />
+              <div
+                class="flex justify-between w-[100%] px-[5px] md:px-[10px] items-center p-0"
+              >
+                <div class="flex flex-col items-start justify-center">
+                  <p
+                    class="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-[400] text-[#2B572E]"
+                  >
+                    Green Apple
+                  </p>
+                  <p
+                    class="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-[500]"
+                  >
+                    $14.99
+                  </p>
+                  <img
+                    src="./assets/images/product/Rating.png"
+                    alt=""
+                    class="w-[70px] sm:w-[80px] md:[90px] lg:[100px]"
+                  />
+                </div>
+                <div
+                  class="flex w-[35px] h-[35px] sm:w[50px] sm:h-[50px] md:w-[50px] md:h-[50px] bg-[#f2f2f2] items-center justify-center border rounded-full"
+                >
+                  <img
+                    src="./assets/images/product/Bag.png"
+                    alt=""
+                    class="w-[19px] h-[19px] sm:w-[25px] sm:h-[25px] md:w-[25px] md:h-[25px]"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="bg-white border md:p-4">
+              <img
+                src="./assets/images/product/Image.png"
+                alt="Product"
+                class="w-full h-56 object-contain rounded-lg"
+              />
+              <div
+                class="flex justify-between w-[100%] px-[5px] md:px-[10px] items-center p-0"
+              >
+                <div class="flex flex-col items-start justify-center">
+                  <p
+                    class="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-[400] text-[#2B572E]"
+                  >
+                    Green Apple
+                  </p>
+                  <p
+                    class="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-[500]"
+                  >
+                    $14.99
+                  </p>
+                  <img
+                    src="./assets/images/product/Rating.png"
+                    alt=""
+                    class="w-[70px] sm:w-[80px] md:[90px] lg:[100px]"
+                  />
+                </div>
+                <div
+                  class="flex w-[35px] h-[35px] sm:w[50px] sm:h-[50px] md:w-[50px] md:h-[50px] bg-[#f2f2f2] items-center justify-center border rounded-full"
+                >
+                  <img
+                    src="./assets/images/product/Bag.png"
+                    alt=""
+                    class="w-[19px] h-[19px] sm:w-[25px] sm:h-[25px] md:w-[25px] md:h-[25px]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+
+
+    <!-- Banner section -->
+    <section
+      class="main-banner-section w-[100%] lg:w-[80%] py-[50px] lg:py-[80px] gap-[16px] mx-auto px-2 lg:px-0"
+    >
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Grid Item 1 -->
+        <div class="relative bg-white overflow-hidden">
+          <img
+            src="./assets/images/banner/Image.png"
+            alt="Grid Image 2"
+            class="w-full h-auto object-cover"
+          />
+          <div
+            class="absolute top-0 right-1/2 w-1/2 h-full bg-opacity-60 text-white gap-[16px] flex flex-col justify-center"
+            style="clip-path: inset(0 0 0 0)"
+          >
+            <h2
+              class="text-[20px] sm:text-[24px] md:text-[28px] font-[600] lg:text-[32px] leading-none"
+            >
+              100% Fresh Cow Milk
+            </h2>
+            <p
+              class="text-12px sm:text-[12px] md:text-[12px] lg:text-[14px] font-[400] leading-none"
+            >
+              Starting at $14.99
+            </p>
+            <button
+              class="flex w-fit gap-[12px] text-[#00b207] items-center justify-center bg-[white] rounded-[43px] px-[32px] py-[14px]"
+            >
+              <p
+                class="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[600]"
+              >
+                Shop now
+              </p>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid Item 2 -->
+        <div class="relative bg-white overflow-hidden">
+          <img
+            src="./assets//images/banner/Image (1).png"
+            alt="Grid Image 2"
+            class="w-full h-auto object-cover"
+          />
+          <div
+            class="absolute top-0 left-1/2 w-1/2 h-full bg-opacity-60 text-white gap-[16px] flex flex-col justify-center"
+            style="clip-path: inset(0 0 0 0)"
+          >
+            <p
+              class="text-12px sm:text-[12px] md:text-[12px] lg:text-[14px] font-[400] leading-none text-[black]"
+            >
+              Drink Sale
+            </p>
+            <h2
+              class="text-[20px] sm:text-[24px] md:text-[28px] font-[600] lg:text-[32px] leading-none text-[black]"
+            >
+              Water & Soft Drink
+            </h2>
+            <button
+              class="flex w-fit gap-[12px] text-[#00b207] items-center justify-center bg-white rounded-[43px] px-[32px] py-[14px]"
+            >
+              <p
+                class="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[600]"
+              >
+                Shop now
+              </p>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid Item 3 -->
+        <div class="relative bg-white overflow-hidden">
+          <img
+            src="./assets//images/banner/Image (2).png"
+            alt="Grid Image 2"
+            class="w-full h-auto object-cover"
+          />
+          <div
+            class="absolute top-0 right-1/2 w-1/2 h-full bg-opacity-60 text-white gap-[16px] flex flex-col justify-center"
+            style="clip-path: inset(0 0 0 0)"
+          >
+            <p
+              class="text-12px sm:text-[12px] md:text-[12px] lg:text-[14px] font-[400] leading-none text-[black]"
+            >
+              100% Organic
+            </p>
+            <h2
+              class="text-[20px] sm:text-[24px] md:text-[28px] font-[600] lg:text-[32px] leading-none text-[black]"
+            >
+              Quick Breakfast
+            </h2>
+            <button
+              class="flex w-fit gap-[12px] text-[#00b207] items-center justify-center bg-white rounded-[43px] px-[32px] py-[14px]"
+            >
+              <p
+                class="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[600]"
+              >
+                Shop now
+              </p>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    
+    <!-- Deal of the month section-->
+    <section
+      class="main-deal-of-the-month-section grid grid-cols-1 lg:grid-cols-3 p-4 w-full h-full lg:h-[500px] lg:gap-[0px] overflow-hidden bg-[#EDF2EE]"
+    >
+      <!-- First Image -->
+      <div class="flex justify-center items-center w-full min-w-0">
+        <img
+          src="./assets/images/dealofthemonth/dom-1.png"
+          alt="First Image"
+          class="w-[500px] lg:w-full object-cover h-auto"
+        />
+      </div>
+
+      <!-- Timer Box -->
+      <div
+        class="mt-[20px] md:mt-[0px] flex flex-col items-center justify-center w-full min-w-0 gap-[16px] bg-[#EDF2EE]"
+      >
+        <div class="">
+          <p
+            class="font-[500] text-[14px] lg:text-[16px] uppercase text-[#00B207] text-center"
+          >
+            Best Deals
+          </p>
+          <h3
+            class="font-[600] text-[30px] md:text-[35px] lg:text-[40px] text-[#002603] text-center leading-tight"
+          >
+            Our Special Products Deal of the Month
+          </h3>
+        </div>
+        <div class="flex w-full justify-center gap-[8px]">
+          <div
+            class="w-[96px] h-[96px] border flex flex-col items-center justify-center"
+          >
+            <p class="text-[32px] font-[400] text-[#00B207]">03</p>
+            <p
+              class="text-[14px] font-[400] text-[#618062] transform uppercase"
+            >
+              Days
+            </p>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/dealofthemonth/_.png" alt="" />
+          </div>
+          <div
+            class="w-[96px] h-[96px] border flex flex-col items-center justify-center"
+          >
+            <p class="text-[32px] font-[400] text-[#00B207]">02</p>
+            <p
+              class="text-[14px] font-[400] text-[#618062] transform uppercase"
+            >
+              Hours
+            </p>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/dealofthemonth/_.png" alt="" />
+          </div>
+          <div
+            class="w-[96px] h-[96px] border flex flex-col items-center justify-center"
+          >
+            <p class="text-[32px] font-[400] text-[#00B207]">18</p>
+            <p
+              class="text-[14px] font-[400] text-[#618062] transform uppercase"
+            >
+              Mins
+            </p>
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="./assets/images/dealofthemonth/_.png" alt="" />
+          </div>
+          <div
+            class="w-[96px] h-[96px] border flex flex-col items-center justify-center"
+          >
+            <p class="text-[32px] font-[400] text-[#00B207]">46</p>
+            <p
+              class="text-[14px] font-[400] text-[#618062] transform uppercase"
+            >
+              Secs
+            </p>
+          </div>
+        </div>
+        <div>
+          <button
+            class="flex w-fit gap-[12px] bg-[#00b207] items-center justify-center text-white rounded-[43px] px-[32px] py-[14px]"
+          >
+            <p
+              class="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[600]"
+            >
+              Shop now
+            </p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Third Image -->
+      <div
+        class="flex justify-center items-center w-full min-w-0 h-[350px] lg:h-auto"
+      >
+        <img
+          src="./assets/images/dealofthemonth/dom-2.png"
+          alt="Third Image"
+          class="object-cover rounded-lg"
+        />
+      </div>
+    </section>
+
     <!-- script link -->
     <script src="assets//js/index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>

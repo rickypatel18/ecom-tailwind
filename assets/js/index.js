@@ -1,5 +1,3 @@
-
-
 // right toggle
 document.addEventListener("DOMContentLoaded", function () {
   var menuToggle = document.getElementById("menu-toggle");
