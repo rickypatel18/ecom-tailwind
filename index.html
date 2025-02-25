@@ -11,6 +11,8 @@
       rel="stylesheet"
     />
     <!--  css links -->
+
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="assets/font/seg/stylesheet.css" />
     <link rel="stylesheet" href="assets//font/poppins/stylesheet.css" />
     <link rel="stylesheet" href="assets/css/slick/slick.css" />
@@ -36,11 +38,13 @@
 
   <body>
     <!-- top-bar-header -->
-    <div class="w-full p-0 m-0 border-b border-gray-200 bg-white" ;>
+    <section
+      class="main-topbar-section w-full p-0 m-0 border-b border-gray-200 bg-white"
+      ;
+    >
       <!-- signup -->
-      <div
-        style="background: #333333; padding: 10px 0px"
-        class="h-[auto] lg:h-[42px]"
+      <section
+        class="signup-section h-[auto] lg:h-[42px] bg-[#333333] py-[10px] px-0"
       >
         <div
           class="w-[100%] px-3 mx-auto flex flex-wrap flex-row justify-between items-center gap-[10px] lg:px-0 lg:w-[80%]"
@@ -83,10 +87,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- logo-searchbar-cart -->
-      <div class="relative w-full px-[10px] lg:px-[0px]">
+      <section class="logo-section relative w-full px-[10px] lg:px-[0px]">
         <div
           class="w-full h-[60px] mx-auto py-0 flex items-center justify-between gap-2 md:h-[93px] md:gap-5 md:px-0 lg:w-[80%] lg:gap-0"
         >
@@ -323,16 +327,20 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- navigation -->
-      <div class="bg-[#f2f2f2] hidden md:flex border-none outline-none">
+      <section
+        class="navigation-section bg-[#f2f2f2] hidden md:flex border-none outline-none"
+      >
         <div
           class="w-full mx-auto flex flex-wrap items-center md:justify-between lg:w-[80%]"
         >
           <!-- Left Section: Category Button -->
           <div class="relative">
+            <!-- Category Button -->
             <div
+              id="category-button-md"
               class="flex items-center justify-center bg-[#00B207] h-[56px] w-[210px] px-4 py-4 text-white cursor-pointer gap-[8px]"
             >
               <i class="fa-solid fa-bars text-[18px]"></i>
@@ -340,6 +348,65 @@
                 All Categories
               </p>
               <i class="fa-solid fa-chevron-down text-[14px] ml-2"></i>
+            </div>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="dropdown-menu-md"
+              class="absolute left-0 mt-2 w-[210px] bg-white shadow-lg rounded-md opacity-0 scale-95 transition-all duration-300 ease-in-out pointer-events-none z-50"
+            >
+              <ul class="py-2">
+                <!-- Category 1 -->
+                <li
+                  class="relative px-4 py-2 cursor-pointer hover:bg-gray-100 category-item-md border-b"
+                >
+                  <span>Electronics</span>
+                  <i
+                    class="fas fa-chevron-right absolute right-4 top-3 text-gray-400 toggle-icon"
+                  ></i>
+                </li>
+                <ul class="pl-6 hidden subcategory">
+                  <li class="px-4 py-2 hover:bg-gray-100 border-b">
+                    Smartphones
+                  </li>
+                  <li class="px-4 py-2 hover:bg-gray-100 border-b">Cameras</li>
+                  <li class="px-4 py-2 hover:bg-gray-100 border-b">Laptops</li>
+                </ul>
+
+                <!-- Category 2 -->
+                <li
+                  class="relative px-4 py-2 cursor-pointer hover:bg-gray-100 category-item-md border-b"
+                >
+                  <span>Fashion</span>
+                  <i
+                    class="fas fa-chevron-right absolute right-4 top-3 text-gray-400 toggle-icon"
+                  ></i>
+                </li>
+                <ul class="pl-6 hidden subcategory">
+                  <li class="px-4 py-2 hover:bg-gray-100 border-b">Men</li>
+                  <li class="px-4 py-2 hover:bg-gray-100 border-b">Women</li>
+                  <li class="px-4 py-2 hover:bg-gray-100 border-b">Kids</li>
+                </ul>
+
+                <!-- Category 3 -->
+                <li
+                  class="relative px-4 py-2 cursor-pointer hover:bg-gray-100 category-item-md border-b"
+                >
+                  <span>Home & Kitchen</span>
+                  <i
+                    class="fas fa-chevron-right absolute right-4 top-3 text-gray-400 toggle-icon"
+                  ></i>
+                </li>
+                <ul class="pl-6 hidden subcategory">
+                  <li class="px-4 py-2 hover:bg-gray-100 border-b">
+                    Furniture
+                  </li>
+                  <li class="px-4 py-2 hover:bg-gray-100 border-b">
+                    Appliances
+                  </li>
+                  <li class="px-4 py-2 hover:bg-gray-100 border-b">Decor</li>
+                </ul>
+              </ul>
             </div>
           </div>
 
@@ -411,13 +478,11 @@
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
 
     <!-- carousal section  -->
-    <section
-      class="home-main-banner overflow-hidden border border-red-500 pb-[20px] lg:pb-[150px]"
-    >
+    <section class="home-main-banner overflow-hidden pb-[20px] lg:pb-[150px]">
       <div class="container mx-auto">
         <div class="banner-slider-wrap">
           <div class="item">
@@ -565,7 +630,7 @@
     >
       <!--feature section  -->
       <section
-        class="main-feature-section w-full lg:w-[80%] mx-auto lg:absolute lg:top-[-120px] xl:top-[-90px] lg:left-1/2 lg:transform lg:-translate-x-1/2"
+        class="feature-section w-full lg:w-[80%] mx-auto lg:absolute lg:top-[-120px] xl:top-[-90px] lg:left-1/2 lg:transform lg:-translate-x-1/2"
       >
         <div
           class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 justify-center items-stretch text-center border border-[#DAE5DA] rounded-lg mx-2 md:mx-[0px] bg-[white]"
@@ -663,11 +728,11 @@
 
       <!--Products section  -->
       <section
-        class="main-product-section w-[100%] px-2 lg:px-0 lg:w-[80%] flex flex-col justify-center gap-[50px] mx-auto pb-[80px] lg:mt-[80px]"
+        class="product-section w-[100%] px-2 lg:px-0 lg:w-[80%] flex flex-col justify-center gap-[50px] mx-auto pb-[80px] lg:mt-[80px]"
       >
         <!-- Navigation links & intoduction -->
         <section
-          class="main-navigation-section flex gap-[24px] mx-auto flex-col mt-[100px]"
+          class="navigation-section flex gap-[24px] mx-auto flex-col mt-[100px]"
         >
           <h3
             class="text-[#1A1A1A] text-[27px] sm:text-[30px] md:text-[35px] lg:text-[40px] font-[600] text-center"
@@ -729,7 +794,7 @@
         </section>
 
         <!-- Product cards -->
-        <section class="w-[100%] main-product-card-section mx-auto p-0">
+        <section class="product-card-section w-[100%] mx-auto p-0">
           <div
             class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
           >
@@ -999,6 +1064,7 @@
     </section>
 
     <!-- Banner section -->
+
     <section
       class="main-banner-section w-[100%] lg:w-[80%] py-[50px] lg:py-[80px] mx-auto px-2 lg:px-0"
     >
@@ -1011,7 +1077,7 @@
             class="w-full h-auto object-cover"
           />
           <div
-            class="absolute top-0 right-1/2 w-1/2 pl-[10px] h-full bg-opacity-60 text-white gap-[10px] flex flex-col justify-center"
+            class="absolute top-0 left-[0px] w-[60%] pl-[10px] h-full bg-opacity-60 text-white gap-[10px] flex flex-col justify-center"
             style="clip-path: inset(0 0 0 0)"
           >
             <h2
@@ -1045,7 +1111,7 @@
             class="w-full h-auto object-cover"
           />
           <div
-            class="absolute top-0 left-1/2 w-1/2 h-full bg-opacity-60 text-white gap-[16px] flex flex-col justify-center"
+            class="absolute top-0 left-1/2 w-[60%] h-full bg-opacity-60 text-white gap-[16px] flex flex-col justify-center"
             style="clip-path: inset(0 0 0 0)"
           >
             <p
@@ -1079,7 +1145,7 @@
             class="w-full h-auto object-cover"
           />
           <div
-            class="absolute top-0 right-1/2 w-1/2 pl-[10px] h-full bg-opacity-60 text-white gap-[16px] flex flex-col justify-center"
+            class="absolute top-0 left-[0px] w-[60%] pl-[10px] h-full bg-opacity-60 text-white gap-[16px] flex flex-col justify-center"
             style="clip-path: inset(0 0 0 0)"
           >
             <p
@@ -1109,29 +1175,31 @@
 
     <!-- Deal of the month section-->
     <section
-      class="main-deal-of-the-month-section grid grid-cols-1 lg:grid-cols-3 p-4 w-full h-full lg:h-[500px] lg:gap-[0px] overflow-hidden bg-[#EDF2EE]"
+      class="main-deal-of-the-month-section grid grid-cols-1 lg:grid-cols-3 p-4 w-full h-auto md:h-auto lg:h-[500px] gap-[0px] overflow-hidden bg-[#EDF2EE]"
     >
       <!-- First Image -->
-      <div class="flex justify-center items-center w-full min-w-0">
+      <section
+        class="dotm1-section flex justify-center items-center w-full min-w-0"
+      >
         <img
           src="./assets/images/dealofthemonth/dom-1.png"
           alt="First Image"
           class="w-[500px] lg:w-full object-cover h-auto"
         />
-      </div>
+      </section>
 
       <!-- Timer Box -->
-      <div
-        class="mt-[20px] md:mt-[0px] flex flex-col items-center justify-center w-full min-w-0 gap-[16px] bg-[#EDF2EE]"
+      <section
+        class="dotm2-section mt-[0px] md:mt-[0px] flex flex-col items-center justify-center w-full min-w-0 gap-[16px] bg-[#EDF2EE]"
       >
         <div class="">
           <p
-            class="font-[500] text-[14px] lg:text-[16px] uppercase text-[#00B207] text-center"
+            class="font-[500] text-[12px] md:text-[13px] lg:text-[14px] lg:text-[16px] uppercase text-[#00B207] text-center"
           >
             Best Deals
           </p>
           <h3
-            class="font-[600] text-[30px] md:text-[35px] lg:text-[40px] text-[#002603] text-center leading-tight"
+            class="font-[600] text-[25px] md:text-[28px] lg:text-[30px] md:text-[35px] lg:text-[40px] text-[#002603] text-center leading-tight"
           >
             Our Special Products Deal of the Month
           </h3>
@@ -1140,9 +1208,13 @@
           <div
             class="w-[96px] h-[96px] border flex flex-col items-center justify-center"
           >
-            <p class="text-[32px] font-[400] text-[#00B207]">03</p>
             <p
-              class="text-[14px] font-[400] text-[#618062] transform uppercase"
+              class="text-[28px] md:text-[30px] lg:text-[32px] font-[400] text-[#00B207]"
+            >
+              03
+            </p>
+            <p
+              class="text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#618062] transform uppercase"
             >
               Days
             </p>
@@ -1153,9 +1225,13 @@
           <div
             class="w-[96px] h-[96px] border flex flex-col items-center justify-center"
           >
-            <p class="text-[32px] font-[400] text-[#00B207]">02</p>
             <p
-              class="text-[14px] font-[400] text-[#618062] transform uppercase"
+              class="text-[28px] md:text-[30px] lg:text-[32px] font-[400] text-[#00B207]"
+            >
+              02
+            </p>
+            <p
+              class="text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#618062] transform uppercase"
             >
               Hours
             </p>
@@ -1166,9 +1242,13 @@
           <div
             class="w-[96px] h-[96px] border flex flex-col items-center justify-center"
           >
-            <p class="text-[32px] font-[400] text-[#00B207]">18</p>
             <p
-              class="text-[14px] font-[400] text-[#618062] transform uppercase"
+              class="text-[28px] md:text-[30px] lg:text-[32px] font-[400] text-[#00B207]"
+            >
+              18
+            </p>
+            <p
+              class="text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#618062] transform uppercase"
             >
               Mins
             </p>
@@ -1179,9 +1259,13 @@
           <div
             class="w-[96px] h-[96px] border flex flex-col items-center justify-center"
           >
-            <p class="text-[32px] font-[400] text-[#00B207]">46</p>
             <p
-              class="text-[14px] font-[400] text-[#618062] transform uppercase"
+              class="text-[28px] md:text-[30px] lg:text-[32px] font-[400] text-[#00B207]"
+            >
+              46
+            </p>
+            <p
+              class="text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#618062] transform uppercase"
             >
               Secs
             </p>
@@ -1199,18 +1283,18 @@
             <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
-      </div>
+      </section>
 
       <!-- Third Image -->
-      <div
-        class="flex justify-center items-center w-full min-w-0 h-[350px] lg:h-auto"
+      <section
+        class="dotm3-section flex justify-center items-center w-full min-w-0 h-[350px] mt-0 sm:mt-10 lg:h-auto"
       >
         <img
           src="./assets/images/dealofthemonth/dom-2.png"
           alt="Third Image"
           class="object-cover rounded-lg"
         />
-      </div>
+      </section>
     </section>
 
     <!-- Featured Products section -->
@@ -1492,15 +1576,17 @@
 
     <!-- client testimonial -->
     <section
-      class="py-12 bg-[#EDF2EE] h-[1800px] sm:h-[1500px] md:h-[1150px] lg:h-[850px]"
+      class="main-client-testimonial-section pt-12 bg-[#EDF2EE] sm:h-[1300px] md:h-[1100px] lg:h-[800px] xl:h-[750px]"
     >
-      <div class="w-full lg:w-[80%] px-2 lg:px-[0px] mx-auto text-center">
-        <h2 class="text-[40px] font-[600] text-[#002603] mb-8">
+      <section class="w-full lg:w-[80%] px-2 lg:px-[0px] mx-auto text-center">
+        <h2
+          class="text-[32px] md:text-[36px] lg:text-[40px] font-[600] text-[#002603] mb-8"
+        >
           What our Clients Says
         </h2>
         <!-- main grid section -->
-        <div
-          class="main-section-clien grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[24px] mb-10"
+        <section
+          class="client-cards-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[24px] mb-10"
         >
           <div class="main-client flex flex-col gap-[16px]">
             <div
@@ -1626,43 +1712,60 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <!-- video section -->
-        <div
-          class="absolute mx-auto rounded-lg w-[90%] sm:w-[97%] md:w-[98%] lg:w-[80%] z-[90]"
+        <!-- Video Section -->
+        <section
+          class="video-section block md:absolute mx-auto rounded-lg w-[90%] sm:w-[97%] md:w-[98%] lg:w-[80%] z-[90] relative"
         >
-          <img
-            alt="Farmers working in an organic farm"
-            class="w-[100%] h-[500px] object-cover"
-            src="https://storage.googleapis.com/a1aa/image/4vINqHuh5QNYM-Zx1OQmNJYq3pY6P2Gmaf-uojNdujg.jpg"
-          />
+          <!-- Video Player (Initially Without Controls) -->
+          <video
+            id="video"
+            class="w-full h-[400px] md:h-[500px] object-cover rounded-lg"
+            poster="https://storage.googleapis.com/a1aa/image/4vINqHuh5QNYM-Zx1OQmNJYq3pY6P2Gmaf-uojNdujg.jpg"
+          >
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Overlay Content (Hidden When Video Plays) -->
           <div
-            class="absolute inset-0 bg-green-900 bg-opacity-50 flex items-center justify-center"
+            id="video-overlay"
+            class="absolute inset-0 bg-green-900 bg-opacity-50 flex items-center justify-center transition-opacity duration-500"
           >
             <div class="text-center text-white">
               <p class="text-lg">VIDEO</p>
               <h1 class="text-3xl font-bold">
                 We're the Best Organic Farm in the World
               </h1>
-              <button class="mt-4 text-2xl">
-                <i class="fas fa-play-circle"> </i>
+              <!-- Play Button -->
+              <button id="play-button" class="mt-4 text-4xl">
+                <i class="fas fa-play-circle"></i>
               </button>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </section>
 
     <!-- latest news section -->
-    <div
-      class="lg:w-[80%] mx-auto md:pt-0 lg:pt-[250px] relative h-[700px] lg:h-[590px] border border-red-500"
+    <section
+      class="main-latest-news-section lg:w-[80%] mx-auto md:pt-0 lg:pt-[280px] relative h-auto lg:h-[650px]"
     >
       <!-- Latest News Section -->
       <div class="mt-12 text-center">
-        <h2 class="text-[#002603] font-[600] text-[40px]">Latest News</h2>
+        <h2
+          class="text-[#002603] font-[600] text-[31px] sm:text-[33px] md:text-[36px] lg:text-[40px]"
+        >
+          Latest News
+        </h2>
       </div>
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 absolute">
+      <section
+        class="latest-news-cards-section mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:absolute"
+      >
         <!-- News Item 1 -->
         <div class="bg-white rounded-lg border md:border-none px-5 relative">
           <img
@@ -1674,26 +1777,31 @@
           <div
             class="absolute top-[160px] left-[40px] bg-green-500 text-white rounded w-16 h-16 flex flex-col items-center justify-center"
           >
-            <span class="text-lg font-bold leading-none">23</span>
-            <span class="text-xs">July</span>
+            <span class="text-[30px] font-[500] leading-none">23</span>
+            <span class="text-[12px] font-[500]">July</span>
           </div>
           <div class="flex flex-col gap-[20px] py-5">
-            <h3 class="text-[18px] font-[500] text-[#002603]">
+            <h3
+              class="text-[14px] md:text-[16px] lg:text-[18px] font-[500] text-[#002603]"
+            >
               Curabitur porttitor orci eget neque accumsan venenatis.
             </h3>
-            <p class="text-[14px] font-[400] text-[#618062]">
+            <p
+              class="text-[11px] md:text-[12px] lg:text-[14px] font-[400] text-[#618062]"
+            >
               Nulla libero lorem, euismod venenatis nibh sed, sodales dictum ex.
               Etiam nisi augue, malesuada et pulvinar at, posuere eu neque.
             </p>
             <div
               class="flex px-38px items-center gap-[15px] bg-[red-500] text-[#00B207]"
             >
-              <p class="text-[16px] font-[600]">Read More</p>
+              <p class="text-[14px] md:text-[15px] lg:text-[16px] font-[600]">
+                Read More
+              </p>
               <i class="fa-solid fa-arrow-right w-[15px] h-[15px]"></i>
             </div>
           </div>
         </div>
-
         <!-- News Item 2 -->
         <div class="bg-white rounded-lg px-5 relative">
           <img
@@ -1705,21 +1813,27 @@
           <div
             class="absolute top-[160px] left-[40px] bg-green-500 text-white rounded w-16 h-16 flex flex-col items-center justify-center"
           >
-            <span class="text-lg font-bold leading-none">23</span>
-            <span class="text-xs">July</span>
+            <span class="text-[30px] font-[500] leading-none">23</span>
+            <span class="text-[12px] font-[500]">July</span>
           </div>
           <div class="flex flex-col gap-[20px] py-5">
-            <h3 class="text-[18px] font-[500] text-[#002603]">
+            <h3
+              class="text-[14px] md:text-[16px] lg:text-[18px] font-[500] text-[#002603]"
+            >
               Curabitur porttitor orci eget neque accumsan venenatis.
             </h3>
-            <p class="text-[14px] font-[400] text-[#618062]">
+            <p
+              class="ttext-[11px] md:text-[12px] lg:text-[14px] font-[400] text-[#618062]"
+            >
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
             </p>
             <button
               class="flex px-38px items-center gap-[15px] bg-[red-500] text-[#00B207]"
             >
-              <p class="text-[16px] font-[600]">Read More</p>
+              <p class="text-[14px] md:text-[15px] lg:text-[16px] font-[600]">
+                Read More
+              </p>
               <i class="fa-solid fa-arrow-right w-[15px] h-[15px]"></i>
             </button>
           </div>
@@ -1735,86 +1849,117 @@
           <div
             class="absolute top-[160px] left-[40px] bg-green-500 text-white rounded w-16 h-16 flex flex-col items-center justify-center"
           >
-            <span class="text-lg font-bold leading-none">23</span>
-            <span class="text-xs">July</span>
+            <span class="text-[30px] font-[500] leading-none">23</span>
+            <span class="text-[12px] font-[500]">July</span>
           </div>
           <div class="flex flex-col gap-[20px] py-5">
-            <h3 class="text-[18px] font-[500] text-[#002603]">
+            <h3
+              class="text-[14px] md:text-[16px] lg:text-[18px] font-[500] text-[#002603]"
+            >
               Curabitur porttitor orci eget neque accumsan venenatis.
             </h3>
-            <p class="text-[14px] font-[400] text-[#618062]">
+            <p
+              class="text-[11px] md:text-[12px] lg:text-[14px] font-[400] text-[#618062]"
+            >
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
             </p>
             <button
               class="flex px-38px items-center gap-[15px] bg-[red-500] text-[#00B207]"
             >
-              <p class="text-[16px] font-[600]">Read More</p>
+              <p class="text-[14px] md:text-[15px] lg:text-[16px] font-[600]">
+                Read More
+              </p>
               <i class="fa-solid fa-arrow-right w-[15px] h-[15px]"></i>
             </button>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
 
     <!-- footer section -->
-    <footer class="bg-[#EDF2EE] text-white pt-0 lg:pt-[350px] mx-auto">
-      <div
-        class="w-full lg:w-[80%] mx-auto flex bg-[#EDF2EE] text px-2 lg:px-0 py-10 justify-between items-center"
-        style="border-top: 1px solid #b4ccb4"
+    <section
+      class="main-footer-section bg-[#EDF2EE] text-white pt-0 lg:pt-[300px] mx-auto"
+    >
+      <section
+        class="footer-upper-section w-full lg:w-[80%] mx-auto gap-4 flex flex-wrap bg-[#EDF2EE] px-4 pt-10 pb-10 lg:pb-20 justify-between items-center border-t border-[#b4ccb4]"
       >
-        <div class="flex gap-[10px] justify-center items-center">
+        <!-- Logo Section -->
+        <div class="flex gap-2 justify-center items-center w-full sm:w-auto">
           <img
             src="./assets/images/logo/logo.png"
-            alt=""
-            class="w-[40px] h-[40px]"
+            alt="Ecobazar Logo"
+            class="w-10 h-10"
           />
-          <h3 class="text-[40px] font-[500] text-[#002603]">Er</h3>
-        </div>
-        <div>
-          <p class="text-[24px] font-[500] text-[#002603]">
-            Subcribe our Newsletter
-          </p>
-          <p class="text-[14px] font-[400] text-[#7A997C]">
-            Pellentesque eu nibh eget mauris congue mattis matti.
-          </p>
-        </div>
-        <div>
-          <div
-            class="flex relative items-center justify-between rounded-[50px] overflow-hidden"
+          <h3
+            class="text-[28px] sm:text-[30px] md:text-[35px] lg:text-[39px] font-[500] text-[#002603]"
           >
-            <input
-              type="text"
-              class="w-[300px] sm:w-[350px] md:w-[400px] lg:w-[491px] rounded-[50px] flex-1 flex-wrap outline-none text-[15px] px-5 py-3 placeholder-[#618062] text-[#618062]"
-              placeholder="Your email address"
-              aria-label="email address"
-            />
-            <button
-              class="bg-[#00B207] absolute right-0 rounded-[50px] w-[40px] h-[35px] md:w-[98px] lg:w-[162px] md:h-[45px] text-[14px] font-[600] text-white flex items-center justify-center py-[16px] px-[40px]"
-            >
-              <p class="text-[16px] font-[600]">Subscribe</p>
-            </button>
-          </div>
+            Ecobazar
+          </h3>
         </div>
-      </div>
-      <div class="w-full bg-[#002603]">
-        <div class="w-full lg:w-[80%] lg:mx-auto bg-[#002603] px-2 lg:px-0">
+
+        <!-- Newsletter Info -->
+        <div class="text-center sm:text-left w-full sm:w-auto">
+          <p
+            class="text-[19px] sm:text-[20px] md:text-[22px] lg:text-[24px] font-[500] text-[#002603]"
+          >
+            Subscribe to our Newsletter
+          </p>
+          <p
+            class="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+          >
+            Pellentesque eu nibh eget mauris congue mattis.
+          </p>
+        </div>
+
+        <!-- Subscription Input -->
+        <div
+          class="flex w-full sm:w-auto relative items-center rounded-full overflow-hidden"
+        >
+          <input
+            type="text"
+            class="w-full sm:w-[300px] md:w-[400px] lg:w-[491px] rounded-full outline-none text-[16px] font-[400] px-5 py-3 placeholder-[#618062] text-[#618062] border border-[#b4ccb4]"
+            placeholder="Your email address"
+            aria-label="email address"
+          />
+          <button
+            class="bg-[#00B207] absolute right-0 rounded-full px-4 sm:px-6 lg:px-10 py-3 sm:py-3 text-white text-[16px] font-[600] flex items-center justify-center"
+          >
+            Subscribe
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="footer-below-section w-full bg-[#002603] px-3 lg:px-0 pt-10 lg:pt-[10px]"
+      >
+        <div class="w-full lg:w-[80%] lg:mx-auto lg:px-0">
           <div
-            class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-10 my-[40px] lg:my-[80px]"
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-10 lg:my-[80px] justify-between"
           >
             <div class="flex flex-col gap-4">
-              <h3 class="text-lg font-medium">About Shopery</h3>
-              <p class="text-sm font-normal">
+              <h3
+                class="text-[16px] md:text-[18px] lg:text-[20px] font-[500] text-[#FFFFFF]"
+              >
+                About Shopery
+              </h3>
+              <p
+                class="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#618062]"
+              >
                 Morbi cursus porttitor enim lobortis molestie. Duis gravida
                 turpis dui, eget bibendum magna congue nec.
               </p>
-              <div class="flex flex-wrap gap-4">
-                <a class="underline text-sm font-medium" href="tel:+2195550114"
+              <div class="flex flex-wrap gap-4 leading-none">
+                <a
+                  class="underline text-[14px] font-[500]"
+                  href="tel:+2195550114"
                   >(219) 555-0114</a
                 >
-                <p class="text-sm font-normal">or</p>
+                <p class="text-[15px] lg:text-[16px] text-[#618062] font-[400]">
+                  or
+                </p>
                 <a
-                  class="underline text-sm font-medium text-white"
+                  class="underline text-[14px] font-[500] text-white"
                   href="mailto:Proxy@gmail.com"
                   >Proxy@gmail.com</a
                 >
@@ -1822,61 +1967,141 @@
             </div>
 
             <div class="flex flex-col gap-4">
-              <h3 class="text-lg font-medium">My Account</h3>
-              <ul class="flex flex-col gap-2">
+              <h3
+                class="text-[16px] md:text-[18px] lg:text-[20px] font-[500] text-[#FFFFFF]"
+              >
+                My Account
+              </h3>
+              <ul class="flex flex-col gap-2 leading-none lg:leading-normal">
                 <li>
-                  <a class="hover:underline text-sm" href="#">My Account</a>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >My Account</a
+                  >
                 </li>
                 <li>
-                  <a class="hover:underline text-sm" href="#">Order History</a>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >Order History</a
+                  >
                 </li>
                 <li>
-                  <a class="hover:underline text-sm" href="#">Shopping Cart</a>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >Shopping Cart</a
+                  >
                 </li>
                 <li>
-                  <a class="hover:underline text-sm" href="#">Wishlist</a>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >Wishlist</a
+                  >
                 </li>
                 <li>
-                  <a class="hover:underline text-sm" href="#">Settings</a>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >Settings</a
+                  >
                 </li>
               </ul>
             </div>
 
             <div class="flex flex-col gap-4">
-              <h3 class="text-lg font-medium">Helps</h3>
-              <ul class="flex flex-col gap-2">
-                <li><a class="hover:underline text-sm" href="#">Contact</a></li>
-                <li><a class="hover:underline text-sm" href="#">FAQs</a></li>
+              <h3
+                class="text-[16px] md:text-[18px] lg:text-[20px] font-[500] text-[#FFFFFF]"
+              >
+                Helps
+              </h3>
+              <ul
+                class="flex flex-col gap-2 leading-none lg:leading lg:leading-normal"
+              >
                 <li>
-                  <a class="hover:underline text-sm" href="#"
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >FAQs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
                     >Terms &amp; Condition</a
                   >
                 </li>
                 <li>
-                  <a class="hover:underline text-sm" href="#">Privacy Policy</a>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >Privacy Policy</a
+                  >
                 </li>
               </ul>
             </div>
 
             <div class="flex flex-col gap-4">
-              <h3 class="text-lg font-medium">Proxy</h3>
-              <ul class="flex flex-col gap-2">
-                <li><a class="hover:underline text-sm" href="#">About</a></li>
-                <li><a class="hover:underline text-sm" href="#">Shop</a></li>
-                <li><a class="hover:underline text-sm" href="#">Product</a></li>
+              <h3
+                class="text-[16px] md:text-[18px] lg:text-[20px] font-[500] text-[#FFFFFF]"
+              >
+                Proxy
+              </h3>
+              <ul class="flex flex-col gap-2 leading-none lg:leading-normal">
                 <li>
-                  <a class="hover:underline text-sm" href="#"
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >Shop</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >Product</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
                     >Products Details</a
                   >
                 </li>
                 <li>
-                  <a class="hover:underline text-sm" href="#">Track Order</a>
+                  <a
+                    class="hover:underline text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-[400] text-[#7A997C]"
+                    href="#"
+                    >Track Order</a
+                  >
                 </li>
               </ul>
             </div>
 
             <div class="flex flex-col gap-4">
-              <h3 class="text-lg font-medium">Instagram</h3>
+              <h3
+                class="text-[16px] md:text-[18px] lg:text-[20px] font-[500] text-[#FFFFFF]"
+              >
+                Instagram
+              </h3>
               <div class="grid grid-cols-4 gap-2">
                 <img
                   class="w-full h-auto object-cover"
@@ -1923,7 +2148,7 @@
           </div>
 
           <div
-            class="border-t border-t-[#1B421D] py-[20px] flex flex-col md:flex-row items-center justify-between"
+            class="border-t border-t-[#1B421D] py-[20px] flex flex-col md:flex-row items-center justify-between gap-[10px]"
           >
             <div class="flex gap-[8px] text-center justify-center items-center">
               <a
@@ -1960,44 +2185,46 @@
               </a>
             </div>
 
-            <p class="text-[14px] font-[400]">
+            <p class="text-[14px] font-[400] text-[#618062]">
               © Shopery eCommerce © 2021. All Rights Reserved
             </p>
             <div class="flex gap-[8px]">
               <img
                 alt="Apple Pay logo"
-                class="h-[29px] w-[39px] border border-[#173B1A]"
+                class="h-[29px] w-[39px] object-contain border border-[#173B1A]"
                 src="./assets/images/payment/ApplePay.png"
               />
               <img
                 alt="Visa logo"
-                class="h-[29px] w-[39px] border border-[#173B1A]"
+                class="h-[29px] w-[39px] object-contain border border-[#173B1A]"
                 src="./assets/images/payment/Method=Discover.png"
               />
               <img
                 alt="Discover logo"
-                class="h-[29px] w-[39px] border border-[#173B1A]"
+                class="h-[29px] w-[39px] object-contain border border-[#173B1A]"
                 src="./assets/images/payment/visa-logo.png"
               />
               <img
                 alt="MasterCard logo"
-                class="h-[29px] w-[39px] border border-[#173B1A]"
+                class="h-[29px] w-[39px] object-contain border border-[#173B1A]"
                 src="./assets/images/payment/Method=Mastercard.png"
               />
               <img
                 alt="Secure Payment logo"
-                class="h-[29px] w-[39px] border border-[#173B1A]"
+                class="h-[29px] w-[39px] object-contain border border-[#173B1A]"
                 src="./assets/images/payment/Cart.png"
               />
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </section>
+    </section>
 
     <!-- script link -->
-    <script src="assets//js/index.js"></script>
+    <script src="./assets/js/toggleFunctionality/toggleFunctionality.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/videoPlayer/videoPlayer.js"></script>
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"

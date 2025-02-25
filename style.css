@@ -1,0 +1,27 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+body::-webkit-scrollbar {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  width: none;
+}
+.banner-1 {
+  background: url("./assets/images/banner/Image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: conatain;
+}
+.banner-2 {
+  background: url("./assets/images/banner/Image\ \(1\).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner-3 {
+  background: url("./assets/images/banner/Image\ \(2\).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

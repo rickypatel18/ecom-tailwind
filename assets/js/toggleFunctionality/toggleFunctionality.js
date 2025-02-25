@@ -93,48 +93,43 @@ document.addEventListener("DOMContentLoaded", function () {
 // category toggle for medium device
 document.addEventListener("DOMContentLoaded", function () {
   const categoryButton = document.getElementById("category-button-md");
-  const dropdownMenu = document.getElementById("dropdown-menu-cat-md");
-  const categoryItems = document.querySelectorAll(".grp-md"); // Each main category
+  const dropdownMenu = document.getElementById("dropdown-menu-md");
+  const categoryItems = document.querySelectorAll(".category-item-md");
 
   // Toggle Main Category Dropdown
   categoryButton.addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevent closing when clicking inside
+    event.stopPropagation();
     dropdownMenu.classList.toggle("opacity-0");
     dropdownMenu.classList.toggle("scale-95");
     dropdownMenu.classList.toggle("pointer-events-none");
   });
 
   // Handle Subcategory Toggle
-  categoryItems.forEach((category) => {
-    const subMenu = category.querySelector("ul"); // Subcategory list
-    const icon = category.querySelector("i"); // Arrow icon
+  categoryItems.forEach((item) => {
+    const subMenu = item.nextElementSibling; // The adjacent subcategory list
+    const icon = item.querySelector(".toggle-icon");
 
-    category.addEventListener("click", function (event) {
-      event.stopPropagation(); // Prevent closing the entire dropdown
+    item.addEventListener("click", function (event) {
+      event.stopPropagation();
 
       // Close all other subcategories first
-      document.querySelectorAll(".grp-md ul").forEach((menu) => {
+      document.querySelectorAll(".subcategory").forEach((menu) => {
         if (menu !== subMenu) {
-          menu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+          menu.classList.add("hidden");
         }
       });
 
-      document.querySelectorAll(".grp-md i").forEach((icon) => {
-        icon.classList.replace("fa-chevron-down", "fa-chevron-right");
+      document.querySelectorAll(".toggle-icon").forEach((iconEl) => {
+        iconEl.classList.replace("fa-chevron-down", "fa-chevron-right");
       });
 
-      // Toggle current subcategory
-      const isOpen = !subMenu.classList.contains("opacity-0");
-      if (isOpen) {
-        subMenu.classList.add("opacity-0", "scale-95", "pointer-events-none");
-        icon.classList.replace("fa-chevron-down", "fa-chevron-right");
-      } else {
-        subMenu.classList.remove(
-          "opacity-0",
-          "scale-95",
-          "pointer-events-none"
-        );
+      // Toggle the current subcategory
+      if (subMenu.classList.contains("hidden")) {
+        subMenu.classList.remove("hidden");
         icon.classList.replace("fa-chevron-right", "fa-chevron-down");
+      } else {
+        subMenu.classList.add("hidden");
+        icon.classList.replace("fa-chevron-down", "fa-chevron-right");
       }
     });
   });
@@ -152,12 +147,12 @@ document.addEventListener("DOMContentLoaded", function () {
       );
 
       // Close all subcategories
-      document.querySelectorAll(".grp-md ul").forEach((menu) => {
-        menu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+      document.querySelectorAll(".subcategory").forEach((menu) => {
+        menu.classList.add("hidden");
       });
 
       // Reset all arrow icons
-      document.querySelectorAll(".grp-md i").forEach((icon) => {
+      document.querySelectorAll(".toggle-icon").forEach((icon) => {
         icon.classList.replace("fa-chevron-down", "fa-chevron-right");
       });
     }
