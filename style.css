@@ -25,3 +25,100 @@ body::-webkit-scrollbar {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* Define global CSS variables */
+:root {
+  /* Primary Theme Colors */
+  --primary-color: #00b207; /* Main theme color */
+  --primary-light: #5cff74; /* Lighter shade of primary */
+  --primary-dark: #008506; /* Darker shade of primary */
+
+  /* Secondary Colors */
+  --secondary-color: #333333;
+  --secondary-light: #666666;
+  --secondary-dark: #1a1a1a;
+
+  /* Background Colors */
+  --bg-white: #ffffff;
+  --bg-light: #f8f9fa;
+  --bg-dark: #121212;
+
+  /* Text Colors */
+  --text-color: #b3b3b3;
+  --text-light: #e0e0e0;
+  --text-dark: #222222;
+
+  /* Border Colors */
+  --border-color: #e6e6e6;
+  --border-dark: #c0c0c0;
+
+  /* Shadow */
+  --shadow-light: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Typography */
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+
+  /* Button Styles */
+  --btn-padding: 12px 24px;
+  --btn-radius: 6px;
+  --btn-font-size: 16px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.4s ease-in-out;
+  --transition-slow: 0.6s ease-in-out;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+/* Padding */
+.p-10 {
+  padding: var(--padding-10);
+}
+
+.p-20 {
+  padding: var(--padding-20);
+}
+
+.p-30 {
+  padding: var(--padding-30);
+}
+
+/* Margin */
+.m-10 {
+  margin: var(--margin-10);
+}
+
+.m-20 {
+  margin: var(--margin-20);
+}
+
+.m-30 {
+  margin: var(--margin-30);
+}

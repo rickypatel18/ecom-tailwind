@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Custom Styles</title>
+
+    <!-- Load Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Config when using tailwind vai cdn link-->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1E40AF", // Custom text color
+              bgPrimary: "#FF0000", // Custom background color (RED)
+            },
+            spacing: {
+              10: "2.5rem",
+              20: "5rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="shadow-lg p-10">
+      <!-- FIX: Use bg-[color] instead of bg-bgPrimary -->
+      <p class="bg-bgPrimary text-primary text-2xl p-10">
+        This background should be red, and text should be primary blue!
+      </p>
+    </div>
+  </body>
+</html>
+
+
+<!-- tailwind vai cdn link -->

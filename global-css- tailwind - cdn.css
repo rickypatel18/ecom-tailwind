@@ -1,0 +1,70 @@
+/* Base Styles (Equivalent to Tailwind's @tailwind base) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Flexbox */
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Colors */
+  .text-primary {
+    color: #1e40af; /* Equivalent to Tailwind's text-blue-800 */
+  }
+  
+  .text-secondary {
+    color: #9333ea; /* Equivalent to Tailwind's text-purple-600 */
+  }
+  
+  .bg-primary {
+    background-color: #1e40af; /* Equivalent to Tailwind's bg-blue-800 */
+  }
+  
+  .bg-secondary {
+    background-color: #9333ea; /* Equivalent to Tailwind's bg-purple-600 */
+  }
+  
+  /* Padding */
+  .p-10 {
+    padding: 2.5rem;
+  }
+  
+  .p-20 {
+    padding: 5rem;
+  }
+  
+  .p-30 {
+    padding: 7.5rem;
+  }
+  
+  /* Margin */
+  .m-10 {
+    margin: 2.5rem;
+  }
+  
+  .m-20 {
+    margin: 5rem;
+  }
+  
+  .m-30 {
+    margin: 7.5rem;
+  }
+  

@@ -1,0 +1,100 @@
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+/* tailwind.config.js */
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "var(--primary-color)",
+        secondary: "var(--secondary-color)",
+        text: {
+          DEFAULT: "var(--text-color)",
+          light: "var(--text-light)",
+          dark: "var(--text-dark)",
+        },
+        bg: {
+          white: "var(--bg-white)",
+          light: "var(--bg-light)",
+          dark: "var(--bg-dark)",
+        },
+        border: "var(--border-color)",
+      },
+      spacing: {
+        xs: "var(--spacing-xs)",
+        sm: "var(--spacing-sm)",
+        md: "var(--spacing-md)",
+        lg: "var(--spacing-lg)",
+        xl: "var(--spacing-xl)",
+      },
+      borderRadius: {
+        btn: "var(--btn-radius)",
+      },
+      transitionTimingFunction: {
+        fast: "var(--transition-fast)",
+        medium: "var(--transition-medium)",
+        slow: "var(--transition-slow)",
+      },
+    },
+  },
+  plugins: [],
+};
+/* <div class="bg-primary text-text p-md rounded-btn border border-border transition-fast hover:bg-secondary">
+  This is a styled div using Tailwind with CSS variables.
+</div>
+ */
+
+
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Flexbox */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+.flex-between {
+  @apply flex justify-between items-center;
+}
+.flex-column {
+  @apply flex flex-col justify-center items-center;
+}
+/* Colors */
+.text-primary {
+  @apply text-blue-800;
+}
+.text-secondary {
+  @apply text-purple-600;
+}
+.bg-primary {
+  @apply bg-blue-800;
+}
+.bg-secondary {
+  @apply bg-purple-600;
+}
+/* Padding */
+.p-10 {
+  @apply p-10;
+}
+.p-20 {
+  @apply p-20;
+}
+.p-30 {
+  @apply p-30;
+}
+/* Margin */
+.m-10 {
+  @apply m-10;
+}
+.m-20 {
+  @apply m-20;
+}
+.m-30 {
+  @apply m-30;
+}
+
+
+@import "./styles.css";
+
+/*  Run Tailwind Build Process */
+npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch

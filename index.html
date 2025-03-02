@@ -183,7 +183,7 @@
             </div>
 
             <!-- (Hamburger Icon) -->
-            <div class="relative z-50">
+            <div class="relative z-50 md:block">
               <i
                 class="block md:hidden fa-solid fa-bars cursor-pointer text-xl"
                 id="menu-toggle"
@@ -471,7 +471,7 @@
           </nav>
 
           <!-- Right Section: Phone Number -->
-          <div class="flex items-center justify-center h-[56px]">
+          <div class="hidden lg:flex items-center justify-center h-[56px]">
             <i class="fa-solid fa-phone-volume text-[16px] text-[#1A1A1A]"></i>
             <p class="text-[14px] font-[500] leading-none ml-2 text-[#1A1A1A]">
               (219) 555-0114
@@ -512,9 +512,9 @@
                   Free shipping on all your orders. We deliver, you enjoy.
                 </p>
                 <button
+                class="bg-[var(--primary-color)]"
                   style="
                     display: flex;
-                    background-color: #00b207;
                     border-radius: 43px;
                     padding: 15px 38px;
                     align-items: center;
